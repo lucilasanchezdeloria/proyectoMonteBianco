@@ -14,6 +14,7 @@ El proyecto incluye la estructura completa del sitio, diseño responsive y estil
 - Figma
 - Adobe Illustrator
 
+
 **Diseño y mockups**
 
 El diseño visual del sitio fue trabajado previamente en wireframes y mockups de alta fidelidad para mantener coherencia estética y funcional.
@@ -21,12 +22,19 @@ Enlace al mockup:
 
 
 **Estructura del proyecto**
+
 /img                → Imágenes del sitio  
+
 /css                → Hojas de estilo  
+
 index.html          → Página principal
+
 contacto.html       → Página de contacto
+
 historia.html       → Página "Nuestra Historia"
+
 sabores.html        → Página "Nuestros Sabores"
+
 
 **Funcionalidades principales**
 - Navbar responsiva con estilos propios.
