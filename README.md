@@ -1,4 +1,5 @@
 🍨 **Monte Bianco – Website Project**
+
 Este repositorio contiene el desarrollo del sitio web Monte Bianco, una heladería artesanal reconocida por sus sabores tradicionales, productos de calidad y elaboración propia.
 El proyecto incluye la estructura completa del sitio, diseño responsive y estilos personalizados inspirados en los mockups.
 
