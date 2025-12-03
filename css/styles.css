@@ -26,6 +26,10 @@ h3 {
     font-weight: 700 !important;
 }
 
+body {
+    padding-top: 80px; /* Espacio para que la nav bar fija no me coma contenido*/
+}
+
 /* Nav Bar */
 .logotipo {
     width: 6rem;
