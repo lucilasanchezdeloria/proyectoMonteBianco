@@ -183,18 +183,22 @@ h3 {
 }
 
 /* HEADER - PÁGINA EN CONSTRUCCIÓN */
-.contacto-header, .historia-header, .sabores-header {
+.contacto-header,
+.historia-header,
+.sabores-header {
     position: relative;
     width: 100%;
-    height: 60vh; 
+    height: 60vh;
     background-image: url(../img/paginaenconstruccion.jpg);
-    background-size: contain; 
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: right center;
-    background-color: #ffffff; 
+    background-color: #ffffff;
 }
 
-.contacto-header-contenido, .historia-header-contenido, .sabores-header-contenido {
+.contacto-header-contenido,
+.historia-header-contenido,
+.sabores-header-contenido {
     position: absolute;
     top: 50%;
     left: 4rem;
@@ -203,30 +207,42 @@ h3 {
     max-width: 420px;
 }
 
-.contacto-header-heading, .historia-header-heading, .sabores-header-heading {
+.contacto-header-heading,
+.historia-header-heading,
+.sabores-header-heading {
     color: #4A5E3D;
     font-size: 3rem;
     font-weight: 800;
 }
 
 @media (max-width: 992px) {
-    .contacto-header, .historia-header, .sabores-header {
-        background-size: cover; 
+
+    .contacto-header,
+    .historia-header,
+    .sabores-header {
+        background-size: cover;
         background-position: center;
     }
 
-    .contacto-header-contenido, .historia-header-contenido, .sabores-header-contenido {
+    .contacto-header-contenido,
+    .historia-header-contenido,
+    .sabores-header-contenido {
         left: 2rem;
         max-width: 80%;
     }
 }
 
 @media (max-width: 576px) {
-    .contacto-header, .historia-header, .sabores-header {
+
+    .contacto-header,
+    .historia-header,
+    .sabores-header {
         height: 60vh;
     }
 
-    .contacto-header-heading, .historia-header-contenido, .sabores-header-contenido {
+    .contacto-header-heading,
+    .historia-header-contenido,
+    .sabores-header-contenido {
         font-size: 2rem;
     }
 }
@@ -382,6 +398,195 @@ h3 {
         font-size: 1.1rem;
     }
 }
+
+/* ---------------- LAYOUT GENERAL ---------------- */
+
+.contacto-layout {
+    padding: 4rem 0;
+    color: #4A5E3D;
+}
+
+.contacto-row {
+    align-items: flex-start;
+}
+
+/* IZQUIERDA */
+.contacto-left {
+    text-align: left;
+}
+
+/* El bloque que unifica el H2 + texto + card con mismo ancho */
+.contacto-bloque {
+    max-width: 450px;
+}
+
+/* ---------------- TÍTULOS Y TEXTO ---------------- */
+
+.contacto-titulo {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+}
+
+.contacto-texto {
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* ---------------- EMAIL CLICKEABLE ---------------- */
+
+.contacto-mail {
+    color: #D25B4B;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contacto-mail:hover {
+    color: #b84f41;
+    text-decoration: underline;
+}
+
+/* ---------------- CARD ---------------- */
+
+.contacto-card {
+    text-decoration: none;
+    color: #4A5E3D;
+    display: block;
+}
+
+.contacto-card-inner {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.20);
+    transition: 0.3s ease;
+}
+
+.contacto-card-inner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.25);
+}
+
+.contacto-card-inner img {
+    width: 100%;
+    display: block;
+}
+
+.contacto-card-content {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.contacto-card-content h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.contacto-card-content h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+/* ---------------- FORMULARIO ---------------- */
+
+.contacto-right {
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    /* Alineado arriba */
+}
+
+.contacto-form {
+    width: 100%;
+    max-width: 450px;
+}
+
+.contacto-input {
+    border-radius: 10px !important;
+    border: 1px solid #cfcfcf;
+    padding: 0.9rem !important;
+    font-size: 1rem !important;
+}
+
+.contacto-input:focus {
+    border-color: #D25B4B;
+    box-shadow: 0 0 0 0.15rem rgba(210, 91, 75, 0.25);
+}
+
+/* BOTÓN */
+
+.contacto-boton {
+    width: 100%;
+    background-color: #D25B4B;
+    border: none;
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.contacto-boton:hover {
+    background-color: #b84f41;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+/* TABLET (992px → 768px) */
+@media (max-width: 992px) and (min-width: 768px) {
+
+    .contacto-left,
+    .contacto-right {
+        text-align: center;
+    }
+
+    /* MISMO ANCHO PARA CARD Y FORMULARIO */
+    .contacto-bloque,
+    .contacto-form {
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contacto-form {
+        margin-top: 2.5rem;
+    }
+
+    .contacto-card-content {
+        text-align: center;
+    }
+}
+
+/* MOBILE (< 768px) */
+@media (max-width: 768px) {
+
+    .contacto-left,
+    .contacto-right {
+        text-align: center;
+    }
+
+    .contacto-bloque,
+    .contacto-form {
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contacto-form {
+        margin-top: 2rem;
+    }
+
+    .contacto-card-content {
+        text-align: center;
+    }
+}
+
 
 /* Footer */
 footer {
