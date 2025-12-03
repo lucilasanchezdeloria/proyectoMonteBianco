@@ -3,6 +3,7 @@
 Este repositorio contiene el desarrollo del sitio web Monte Bianco, una heladería artesanal reconocida por sus sabores tradicionales, productos de calidad y elaboración propia.
 El proyecto incluye la estructura completa del sitio, diseño responsive y estilos personalizados inspirados en los mockups.
 
+
 **Tecnologías utilizadas**
 - HTML5
 - CSS3
@@ -14,8 +15,10 @@ El proyecto incluye la estructura completa del sitio, diseño responsive y estil
 - Adobe Illustrator
 
 **Diseño y mockups**
+
 El diseño visual del sitio fue trabajado previamente en wireframes y mockups de alta fidelidad para mantener coherencia estética y funcional.
 Enlace al mockup:
+
 
 **Estructura del proyecto**
 /img                → Imágenes del sitio  
