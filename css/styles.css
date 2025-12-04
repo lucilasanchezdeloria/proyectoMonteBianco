@@ -1,4 +1,6 @@
-/* General */
+/* =========================================
+1. ESTILOS GENERALES
+========================================= */
 * {
     font-family: "Nunito Sans", sans-serif !important;
 }
@@ -27,10 +29,13 @@ h3 {
 }
 
 body {
-    padding-top: 80px; /* Espacio para que la nav bar fija no me coma contenido*/
+    padding-top: 80px;
+    /* Espacio para que la nav bar fija y no me coma contenido*/
 }
 
-/* Nav Bar */
+/* =========================================
+2. NAVBAR
+========================================= */
 .logotipo {
     width: 6rem;
 }
@@ -93,6 +98,7 @@ body {
     border-color: #D25B4B;
 }
 
+/* ---- Navbar Responsive ---- */
 @media (max-width: 992px) {
 
     .nav-pedido,
@@ -105,10 +111,11 @@ body {
     }
 }
 
+/* =========================================
+3. INDEX
+========================================= */
 
-/* HEADER */
-
-/* Index */
+/* ---- Header ---- */
 .index-header {
     position: relative;
     background-image: url(../img/homebanner.jpg);
@@ -153,6 +160,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* ---- Header Responsive ---- */
 @media (max-width: 768px) {
     .header-contenido {
         left: 1.5rem;
@@ -186,72 +194,7 @@ body {
     }
 }
 
-/* HEADER - PÁGINA EN CONSTRUCCIÓN */
-.contacto-header,
-.historia-header,
-.sabores-header {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    background-image: url(../img/paginaenconstruccion.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-color: #ffffff;
-}
-
-.contacto-header-contenido,
-.historia-header-contenido,
-.sabores-header-contenido {
-    position: absolute;
-    top: 50%;
-    left: 4rem;
-    transform: translateY(-50%);
-    z-index: 2;
-    max-width: 420px;
-}
-
-.contacto-header-heading,
-.historia-header-heading,
-.sabores-header-heading {
-    color: #4A5E3D;
-    font-size: 3rem;
-    font-weight: 800;
-}
-
-@media (max-width: 992px) {
-
-    .contacto-header,
-    .historia-header,
-    .sabores-header {
-        background-size: cover;
-        background-position: center;
-    }
-
-    .contacto-header-contenido,
-    .historia-header-contenido,
-    .sabores-header-contenido {
-        left: 2rem;
-        max-width: 80%;
-    }
-}
-
-@media (max-width: 576px) {
-
-    .contacto-header,
-    .historia-header,
-    .sabores-header {
-        height: 60vh;
-    }
-
-    .contacto-header-heading,
-    .historia-header-contenido,
-    .sabores-header-contenido {
-        font-size: 2rem;
-    }
-}
-
-/* Main */
+/* ---- Main ---- */
 .index-main {
     color: #4A5E3D;
     text-align: center;
@@ -321,6 +264,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* ---- Main - Responsive ---- */
 @media (max-width: 992px) {
     .index-main-cards {
         grid-template-columns: repeat(2, 1fr);
@@ -333,7 +277,7 @@ body {
     }
 }
 
-/* SECTION */
+/* ---- Section ---- */
 .index-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -385,6 +329,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* ---- Section - Responsive ---- */
 @media (max-width: 992px) {
     .index-section {
         grid-template-columns: 1fr;
@@ -403,7 +348,71 @@ body {
     }
 }
 
-/* ---------------- LAYOUT GENERAL ---------------- */
+/* =========================================
+4. HISTORIA + SABORES
+========================================= */
+
+/* ---- Header ---- */
+.historia-header,
+.sabores-header {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-image: url(../img/paginaenconstruccion.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: #ffffff;
+}
+
+.historia-header-contenido,
+.sabores-header-contenido {
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 420px;
+}
+
+.historia-header-heading,
+.sabores-header-heading {
+    color: #4A5E3D;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+/* ---- Historia y Sabores - Responsive ---- */
+@media (max-width: 992px) {
+    .historia-header,
+    .sabores-header {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .historia-header-contenido,
+    .sabores-header-contenido {
+        left: 2rem;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .historia-header,
+    .sabores-header {
+        height: 60vh;
+    }
+
+    .historia-header-contenido,
+    .sabores-header-contenido {
+        font-size: 2rem;
+    }
+}
+
+
+/* =========================================
+5. CONTACTO
+========================================= */
 
 .contacto-layout {
     padding: 4rem 0;
@@ -414,17 +423,13 @@ body {
     align-items: flex-start;
 }
 
-/* IZQUIERDA */
 .contacto-left {
     text-align: left;
 }
 
-/* El bloque que unifica el H2 + texto + card con mismo ancho */
 .contacto-bloque {
     max-width: 450px;
 }
-
-/* ---------------- TÍTULOS Y TEXTO ---------------- */
 
 .contacto-titulo {
     font-size: 2.2rem;
@@ -439,8 +444,6 @@ body {
     line-height: 1.6;
 }
 
-/* ---------------- EMAIL CLICKEABLE ---------------- */
-
 .contacto-mail {
     color: #D25B4B;
     font-weight: 700;
@@ -451,8 +454,6 @@ body {
     color: #b84f41;
     text-decoration: underline;
 }
-
-/* ---------------- CARD ---------------- */
 
 .contacto-card {
     text-decoration: none;
@@ -496,13 +497,10 @@ body {
     opacity: 0.8;
 }
 
-/* ---------------- FORMULARIO ---------------- */
-
 .contacto-right {
     text-align: left;
     display: flex;
     align-items: flex-start;
-    /* Alineado arriba */
 }
 
 .contacto-form {
@@ -522,8 +520,6 @@ body {
     box-shadow: 0 0 0 0.15rem rgba(210, 91, 75, 0.25);
 }
 
-/* BOTÓN */
-
 .contacto-boton {
     width: 100%;
     background-color: #D25B4B;
@@ -540,9 +536,7 @@ body {
     background-color: #b84f41;
 }
 
-/* ---------------- RESPONSIVE ---------------- */
-
-/* TABLET (992px → 768px) */
+/* ---- Contacto - Responsive ---- */
 @media (max-width: 992px) and (min-width: 768px) {
 
     .contacto-left,
@@ -550,7 +544,6 @@ body {
         text-align: center;
     }
 
-    /* MISMO ANCHO PARA CARD Y FORMULARIO */
     .contacto-bloque,
     .contacto-form {
         max-width: 450px;
@@ -567,7 +560,6 @@ body {
     }
 }
 
-/* MOBILE (< 768px) */
 @media (max-width: 768px) {
 
     .contacto-left,
@@ -592,7 +584,9 @@ body {
 }
 
 
-/* Footer */
+/* =========================================
+6. FOOTER
+========================================= */
 footer {
     background-color: #4A5E3D;
     color: #ffffff;
