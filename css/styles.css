@@ -40,6 +40,24 @@ body {
     padding-top: 80px;
 }
 
+/* Botón */
+.boton {
+    background-color: #D25B4B;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline-block;
+    box-shadow: 0 6px 18px rgba(210, 91, 75, 0.35);
+    transition: all 0.3s ease;
+}
+
+/* Hover del botón */
+.boton:hover {
+    background-color: #b84f41;
+    transition: background-color 0.3s ease;
+}
 
 /* =========================================
 2. NAVBAR
@@ -65,7 +83,7 @@ body {
     font-weight: 500;
 }
 
-/* Efecto hover */
+/* Efecto hover en texto*/
 .navbar-nav .nav-item .nav-link:hover {
     color: #D25B4B;
     transition: color 0.2s ease;
@@ -137,15 +155,13 @@ body {
     position: relative;
     background-image: url(../img/homebanner.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    /* La imagen cubre todo el contenedor */
+    background-size: cover;     /* La imagen cubre todo el contenedor */
     background-position: center;
-    height: 75vh;
-    /* Altura de la imagen */
+    height: 75vh;     /* Altura de la imagen */
 }
 
 /* Contenedor del texto dentro del header */
-.header-contenido {
+.index-header-contenido {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -154,7 +170,7 @@ body {
 }
 
 /* Títulos y párrafos del header */
-.index-header-heading {
+.index-header-titulo {
     color: #ffffff;
 }
 
@@ -164,28 +180,9 @@ body {
     font-weight: 500;
 }
 
-/* Botón "Descubrí nuestros helados" */
-.index-header-botonhelados {
-    background-color: #D25B4B;
-    color: #ffffff;
-    padding: 0.8rem 2rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 700;
-    display: inline-block;
-    box-shadow: 0 6px 18px rgba(210, 91, 75, 0.35);
-    transition: all 0.3s ease;
-}
-
-/* Hover del botón */
-.index-header-botonhelados:hover {
-    background-color: #b84f41;
-    transition: background-color 0.3s ease;
-}
-
 /* ---- Header Responsive ---- */
 @media (max-width: 768px) {
-    .header-contenido {
+    .index-header-contenido {
         left: 1.5rem;
         right: 1.5rem;
         top: 55%;
@@ -238,7 +235,7 @@ body {
 }
 
 /* Contenedor de las cards */
-.index-main-cards {
+.index-main-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* 4 columnas en desktop */
@@ -277,37 +274,18 @@ body {
     padding: 0 1rem;
 }
 
-/* Botón "Elegí tu favorito" */
-.index-main-botonfavorito {
-    background-color: #D25B4B;
-    color: #ffffff;
-    padding: 0.8rem 2rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 700;
-    display: inline-block;
-    box-shadow: 0 6px 18px rgba(210, 91, 75, 0.35);
-    transition: all 0.3s ease;
-}
-
-/* Hover del botón */
-.index-main-botonfavorito:hover {
-    background-color: #b84f41;
-    transition: background-color 0.3s ease;
-}
-
 /* ---- Main - Responsive ---- */
 
 /* En tablet → 2 columnas */
 @media (max-width: 992px) {
-    .index-main-cards {
+    .index-main-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* En mobile → 1 columna */
 @media (max-width: 576px) {
-    .index-main-cards {
+    .index-main-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -349,25 +327,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Botón “Conocé nuestra historia” */
-.index-section-botonhistoria {
-    background-color: #D25B4B;
-    color: #ffffff;
-    padding: 0.8rem 2rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 700;
-    display: inline-block;
-    box-shadow: 0 6px 18px rgba(210, 91, 75, 0.35);
-    transition: all 0.3s ease;
-}
-
-/* Hover del botón */
-.index-section-botonhistoria:hover {
-    background-color: #b84f41;
-    transition: background-color 0.3s ease;
-}
-
 /* ---- Section - Responsive ---- */
 
 /* En tablet → la imagen pasa arriba, texto abajo */
@@ -383,7 +342,7 @@ body {
     }
 }
 
-/* Ajuste del tamaño del texto en mobile para que se lea bien */
+/* En mobile → ajuste del tamaño del texto para que se lea bien */
 @media (max-width: 576px) {
     .index-section-parrafo {
         font-size: 1.1rem;
@@ -421,9 +380,8 @@ body {
     font-weight: 800;
 }
 
-/* ---- Historia y Sabores - Responsive ---- */
+/* ---- Historia - Responsive ---- */
 @media (max-width: 992px) {
-
     .historia-header {
         background-size: cover;
         background-position: center;
@@ -436,7 +394,6 @@ body {
 }
 
 @media (max-width: 576px) {
-
     .historia-header {
         height: 60vh;
     }
@@ -573,13 +530,15 @@ body {
     font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 1.2rem;
+    text-align: center;
 }
 
-.contacto-texto {
+.contacto-parrafo {
     font-size: 1.15rem;
     font-weight: 500;
     margin-bottom: 2rem;
     line-height: 1.6;
+    text-align: center;
 }
 
 /* Email con efecto hover */
@@ -686,8 +645,8 @@ body {
 }
 
 /* ---- Contacto - Responsive ---- */
-@media (max-width: 992px) and (min-width: 768px) {
 
+@media (max-width: 992px) and (min-width: 768px) {
     .contacto-left,
     .contacto-right {
         text-align: center;
@@ -711,7 +670,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
     .contacto-left,
     .contacto-right {
         text-align: center;
@@ -856,7 +814,6 @@ footer p {
 
 /* Ajuste general de paddings */
 @media (max-width: 992px) {
-
     footer {
         text-align: left;
         padding: 3rem 1.5rem 1.5rem;
@@ -885,7 +842,6 @@ footer p {
 }
 
 @media (max-width: 576px) {
-
     /* Columnas apiladas */
     .footer-top {
         flex-direction: column;
