@@ -10,12 +10,12 @@
 
 /* Elimino subrayados de los enlaces para mantener estética limpia */
 a {
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 /* Elimino viñetas predeterminadas para listas */
 ul {
-    list-style: none !important;
+    list-style: none;
 }
 
 /* Definición de tamaños y pesos de títulos.
@@ -155,9 +155,11 @@ body {
     position: relative;
     background-image: url(../img/homebanner.jpg);
     background-repeat: no-repeat;
-    background-size: cover;     /* La imagen cubre todo el contenedor */
+    background-size: cover;
+    /* La imagen cubre todo el contenedor */
     background-position: center;
-    height: 75vh;     /* Altura de la imagen */
+    height: 75vh;
+    /* Altura de la imagen */
 }
 
 /* Contenedor del texto dentro del header */
@@ -473,14 +475,12 @@ body {
         gap: 2rem;
     }
 
-    @media (max-width: 768px) {
-    .carousel-item img {
-        height: 55vh;
-    }
-}
-
     .sabor-item {
         width: 120px;
+    }
+
+    .carousel-item img {
+        height: 55vh;
     }
 }
 
@@ -489,6 +489,7 @@ body {
         height: 45vh;
     }
 }
+
 @media (max-width: 480px) {
     .sabores-grid {
         grid-template-columns: 1fr;
@@ -516,7 +517,7 @@ body {
 }
 
 /* Columna izquierda (título + texto + card) */
-.contacto-left {
+.contacto-info {
     text-align: left;
 }
 
@@ -601,7 +602,7 @@ body {
 }
 
 /* Formulario */
-.contacto-right {
+.contacto-formulario {
     text-align: left;
     display: flex;
     align-items: flex-start;
@@ -647,8 +648,9 @@ body {
 /* ---- Contacto - Responsive ---- */
 
 @media (max-width: 992px) and (min-width: 768px) {
-    .contacto-left,
-    .contacto-right {
+
+    .contacto-info,
+    .contacto-formulario {
         text-align: center;
     }
 
@@ -670,8 +672,9 @@ body {
 }
 
 @media (max-width: 768px) {
-    .contacto-left,
-    .contacto-right {
+
+    .contacto-info,
+    .contacto-formulario {
         text-align: center;
     }
 
@@ -842,6 +845,7 @@ footer p {
 }
 
 @media (max-width: 576px) {
+
     /* Columnas apiladas */
     .footer-top {
         flex-direction: column;
@@ -879,4 +883,8 @@ footer p {
         margin-top: 2rem;
         font-size: 0.7rem;
     }
+
+     .footer-menu::before {
+        display: none;
+   }
 }
