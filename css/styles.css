@@ -148,12 +148,9 @@ body {
 .header-contenido {
     position: absolute;
     top: 50%;
-    /* Centrado vertical */
     transform: translateY(-50%);
     left: 4rem;
-    /* Separación del borde izquierdo */
     max-width: 480px;
-    /* Ancho máximo para mejorar legibilidad */
 }
 
 /* Títulos y párrafos del header */
@@ -394,12 +391,11 @@ body {
 }
 
 /* =========================================
-4. HISTORIA + SABORES
+4. HISTORIA
 ========================================= */
 
 /* ---- Header ---- */
-.historia-header,
-.sabores-header {
+.historia-header {
     position: relative;
     width: 100%;
     height: 60vh;
@@ -410,8 +406,7 @@ body {
     background-color: #ffffff;
 }
 
-.historia-header-contenido,
-.sabores-header-contenido {
+.historia-header-contenido {
     position: absolute;
     top: 50%;
     left: 4rem;
@@ -420,8 +415,7 @@ body {
     max-width: 420px;
 }
 
-.historia-header-heading,
-.sabores-header-heading {
+.historia-header-heading {
     color: #4A5E3D;
     font-size: 3rem;
     font-weight: 800;
@@ -430,14 +424,12 @@ body {
 /* ---- Historia y Sabores - Responsive ---- */
 @media (max-width: 992px) {
 
-    .historia-header,
-    .sabores-header {
+    .historia-header {
         background-size: cover;
         background-position: center;
     }
 
-    .historia-header-contenido,
-    .sabores-header-contenido {
+    .historia-header-contenido {
         left: 2rem;
         max-width: 80%;
     }
@@ -445,20 +437,114 @@ body {
 
 @media (max-width: 576px) {
 
-    .historia-header,
-    .sabores-header {
+    .historia-header {
         height: 60vh;
     }
 
-    .historia-header-contenido,
-    .sabores-header-contenido {
+    .historia-header-contenido {
         font-size: 2rem;
+    }
+}
+
+/* =========================================
+5. SABORES
+========================================= */
+
+/* ---- Header ---- */
+.carousel-item img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ---- Main ---- */
+/* Contenedor general */
+.sabores-section {
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    color: #4A5E3D;
+}
+
+/* Títulos de categoría */
+.sabores-subtitulo {
+    color: #4A5E3D;
+    margin: 3rem 0 1.5rem;
+    text-align: left;
+}
+
+/* Grid de imágenes */
+.sabores-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    justify-items: center;
+    margin-bottom: 3rem;
+    background: transparent;
+}
+
+/* Tamaño de las imágenes */
+.sabor-item {
+    width: 160px;
+    transition: transform 0.35s ease,
+        filter 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* Efecto hover */
+.sabor-item:hover {
+    transform: translateY(-8px) scale(1.05);
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
+    cursor: pointer;
+}
+
+/* ---- Sabores- Responsive ---- */
+
+@media (max-width: 992px) {
+    .sabores-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sabor-item {
+        width: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sabores-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+    .carousel-item img {
+        height: 55vh;
+    }
+}
+
+    .sabor-item {
+        width: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 45vh;
+    }
+}
+@media (max-width: 480px) {
+    .sabores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sabor-item {
+        width: 150px;
     }
 }
 
 
 /* =========================================
-5. CONTACTO
+6. CONTACTO
 ========================================= */
 
 /* Espacio exterior de la sección */
@@ -649,7 +735,7 @@ body {
 
 
 /* =========================================
-6. FOOTER
+7. FOOTER
 ========================================= */
 
 /* Contenedor principal del footer */
