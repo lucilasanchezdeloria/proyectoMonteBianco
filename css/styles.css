@@ -425,11 +425,21 @@ body {
     color: #4A5E3D;
 }
 
+/* Layout categoría: texto izquierda – imágenes derecha */
+.sabores-categoria {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* izquierda – derecha */
+    align-items: start;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
 /* Títulos de categoría */
 .sabores-subtitulo {
     color: #4A5E3D;
     margin: 3rem 0 1.5rem;
     text-align: left;
+    
 }
 
 /* Grid de imágenes */
@@ -455,6 +465,14 @@ body {
     transform: translateY(-8px) scale(1.05);
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
     cursor: pointer;
+}
+
+/* Estilo de la lista de gustos */
+.sabores-lista {
+    list-style: disc !important;
+    padding-left: 1.5rem !important;
+    columns: 3;
+    column-gap: 4rem;
 }
 
 /* ---- Sabores- Responsive ---- */
@@ -884,7 +902,7 @@ footer p {
         font-size: 0.7rem;
     }
 
-     .footer-menu::before {
+    .footer-menu::before {
         display: none;
-   }
+    }
 }
