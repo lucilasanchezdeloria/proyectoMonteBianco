@@ -18,7 +18,7 @@ El proyecto incluye la estructura completa del sitio, diseño responsive y estil
 **Diseño y mockups**
 
 El diseño visual del sitio fue trabajado previamente en wireframes y mockups de alta fidelidad para mantener coherencia estética y funcional.
-Enlace al mockup:
+Enlace al mockup: https://drive.google.com/file/d/1cXkZC5-bYOKcfgc_xSEiDlZdnk-TU6BT/view?usp=sharing
 
 
 **Estructura del proyecto**
