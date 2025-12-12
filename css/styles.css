@@ -562,6 +562,11 @@ body {
     .sabor-item {
         width: 140px;
     }
+
+    /* Mostrar solo 3 imágenes */
+    .sabores-grid .sabor-item:nth-child(4) {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -576,6 +581,12 @@ body {
 
     .carousel-item img {
         height: 55vh;
+    }
+
+    /* Mostrar solo 2 imágenes */
+    .sabores-grid .sabor-item:nth-child(3),
+    .sabores-grid .sabor-item:nth-child(4) {
+        display: none;
     }
 }
 
@@ -592,6 +603,13 @@ body {
 
     .sabor-item {
         width: 150px;
+    }
+
+    /* Mostrar solo 1 imagen */
+    .sabores-grid .sabor-item:nth-child(2),
+    .sabores-grid .sabor-item:nth-child(3),
+    .sabores-grid .sabor-item:nth-child(4) {
+        display: none;
     }
 }
 
@@ -743,6 +761,7 @@ body {
 /* ---- Contacto - Responsive ---- */
 
 @media (max-width: 992px) and (min-width: 768px) {
+
     .contacto-info,
     .contacto-formulario {
         text-align: center;
@@ -766,6 +785,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
     .contacto-info,
     .contacto-formulario {
         text-align: center;
