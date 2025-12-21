@@ -1,0 +1,27 @@
+/* Transiciones suaves */
+@mixin transition {
+  transition: all 0.3s ease;
+}
+
+/* Flexbox rápido */
+@mixin flex(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $gap: 0
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+/* Botón base */
+@mixin button($bg, $color) {
+  background-color: $bg;
+  color: $color;
+  border-radius: 10px;
+  font-weight: 700;
+  @include transition;
+}

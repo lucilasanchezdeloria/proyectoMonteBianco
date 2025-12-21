@@ -1,0 +1,35 @@
+/* Header base con imagen */
+%header-base {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+}
+
+/* Párrafo base */
+%parrafo-base {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: $verde;
+}
+
+
+/* Card base reutilizable */
+%card-base {
+  background-color: $blanco;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px $negro-20;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover de card */
+%card-hover {
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px $negro-25;
+  }
+}
+
