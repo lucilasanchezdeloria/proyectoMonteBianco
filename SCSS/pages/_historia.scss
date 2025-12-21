@@ -1,0 +1,107 @@
+/* =========================================
+HISTORIA
+========================================= */
+
+/* ---- Header ---- */
+.historia-header {
+    @extend %header-base;
+    background-image: url(../img/historiabanner.jpg);
+}
+
+.historia-header-contenido {
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 420px;
+}
+
+.historia-header-titulo {
+    color: $verde;
+}
+
+/* ---- Main ---- */
+
+/* Estilos intoducción */
+.historia-intro {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    color: $verde;
+    text-align: left;
+}
+
+.historia-parrafo {
+  @extend %parrafo-base;
+  margin-bottom: 1.2rem;
+}
+
+/* Estilos línea de tiempo */
+.historia-linea-tiempo {
+    @include flex(column, flex-start, stretch, 2.5rem);
+    padding-left: 1rem;
+    border-left: 3px solid $rosa;
+    margin-bottom: 4rem;
+}
+
+.hito {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.hito::before {
+    content: "";
+    position: absolute;
+    left: -0.6rem;
+    top: 0.4rem;
+    width: 12px;
+    height: 12px;
+    background-color: $rosa;
+    border-radius: 50%;
+}
+
+.hito-ano {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: $rosa;
+}
+
+.hito-texto {
+    font-size: 1.1rem;
+    color: $verde;
+}
+
+/* =========================================
+MEDIA QUERY - HISTORIA
+========================================= */
+/* ---- Header- Responsive ---- */
+@include respond-max($desktop) {
+    .historia-header {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .historia-header-contenido {
+        left: 2rem;
+        max-width: 80%;
+    }
+}
+
+@include respond-max($mobile) {
+    .historia-header {
+        height: 60vh;
+    }
+
+    .historia-header-contenido {
+        font-size: 2rem;
+    }
+}
+
+/* ---- Main - Responsive ---- */
+@media (max-width: $mobile) {
+    .historia-linea-tiempo {
+        border-left: 2px solid $verde;
+        padding-left: 0.8rem;
+    }
+}

@@ -112,3 +112,81 @@ footer p {
     font-size: 0.6rem;
     opacity: 0.8;
 }
+
+/* =========================================
+MEDIA QUERY - FOOTER
+========================================= */
+/* ---- Footer - Responsive ---- */
+
+/* Ajuste general de paddings */
+@include respond-max($desktop) {
+    footer {
+        text-align: left;
+        padding: 3rem 1.5rem 1.5rem;
+    }
+
+    .footer-top {
+        gap: 3rem;
+    }
+
+    .footer-menu {
+        padding-left: 1.5rem;
+    }
+
+    .footer-menu::before {
+        height: 100%;
+    }
+
+    .index-footer-logos {
+        width: 2.5rem;
+    }
+
+    footer p {
+        font-size: 0.55rem;
+    }
+}
+
+@media (max-width: $mobile) {
+
+    /* Columnas apiladas */
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+
+    .footer-social {
+        width: 100%;
+    }
+
+    .footer-social-icons {
+        gap: 0.8rem;
+    }
+
+    .footer-menu {
+        padding-left: 1rem;
+    }
+
+    .footer-menu::before {
+        width: 2px;
+        height: 100%;
+        left: 0;
+    }
+
+    footer a {
+        font-size: 0.95rem;
+    }
+
+    footer p {
+        font-size: 0.55rem;
+    }
+
+    .footer-derechos {
+        margin-top: 2rem;
+        font-size: 0.7rem;
+    }
+
+    .footer-menu::before {
+        display: none;
+    }
+}

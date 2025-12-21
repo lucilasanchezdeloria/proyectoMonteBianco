@@ -1,0 +1,194 @@
+/* =========================================
+INDEX
+========================================= */
+
+/* ---- Header ---- */
+.index-header {
+    @extend %header-base;
+    background-image: url(../img/homebanner.jpg);
+}
+
+/* Contenedor del texto dentro del header */
+.index-header-contenido {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4rem;
+    max-width: 480px;
+}
+
+/* Títulos y párrafos del header */
+.index-header-titulo {
+    color: $blanco;
+}
+
+.index-header-parrafo {
+    color: $blanco;
+    font-size: 1.375rem;
+    font-weight: 500;
+}
+
+/* ---- Main ---- */
+.index-main {
+    color: $verde;
+    text-align: center;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Párrafo principal */
+.index-main-parrafo {
+  @extend %parrafo-base;
+  max-width: 750px;
+  margin: 1rem auto 3rem;
+}
+
+/* Contenedor de las cards */
+.index-main-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas en desktop */
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Estilo general de cada card */
+.index-main-card {
+    @extend %card-base;
+    @extend %card-hover;
+
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+
+.index-main-card img {
+    width: 100%;
+    display: block;
+}
+
+.index-main-card h3 {
+    margin-top: 1rem;
+}
+
+.index-main-card p {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0 1rem;
+}
+
+/* ---- Section ---- */
+.index-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 6rem auto;
+    padding: 0 1.5rem;
+    color: $verde;
+}
+
+/* Imagen con borde redondeado y efecto hover */
+.index-section-img img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 12px 35px $negro-18;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.index-section-img img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 18px 45px $negro-25;
+}
+
+/* Estilos del texto */
+.index-section-content h2 {
+    margin-bottom: 1rem;
+}
+
+.index-section-parrafo {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+/* =========================================
+MEDIA QUERY - INDEX
+========================================= */
+/* ---- Header Responsive ---- */
+@include respond-max($tablet) {
+    .index-header-contenido {
+        left: 1.5rem;
+        right: 1.5rem;
+        top: 55%;
+        transform: translateY(-45%);
+        max-width: 100%;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 2.2rem !important;
+    }
+
+    .index-header-parrafo {
+        font-size: 1.1rem;
+    }
+}
+
+/* Sumé overlay oscuro cuando se reduce el ancho 
+   para mejorar contraste del texto */
+@include respond-max($tablet-large) {
+    .index-header {
+        background-image:
+            linear-gradient($negro-45, $negro-45),
+            url(../img/homebanner.jpg);
+    }
+}
+
+/* Menos altura en pantallas muy pequeñas */
+@include respond-max($mobile) {
+    .index-header {
+        height: 50vh;
+    }
+}
+
+/* ---- Main - Responsive ---- */
+
+/* En tablet → 2 columnas */
+@media (max-width: $desktop) {
+    .index-main-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* En mobile → 1 columna */
+@media (max-width: $mobile) {
+    .index-main-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---- Section - Responsive ---- */
+
+/* En tablet → la imagen pasa arriba, texto abajo */
+@media (max-width: $desktop) {
+    .index-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .index-section-content {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+}
+
+/* En mobile → ajuste del tamaño del texto para que se lea bien */
+@media (max-width: $mobile) {
+    .index-section-parrafo {
+        font-size: 1.1rem;
+    }
+}

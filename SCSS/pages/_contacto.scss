@@ -1,0 +1,186 @@
+/* =========================================
+CONTACTO
+========================================= */
+
+/* Espacio exterior de la sección */
+.contacto-layout {
+    padding: 4rem 0;
+    color: $verde;
+}
+
+/* Alineación vertical del contenido */
+.contacto-row {
+    align-items: flex-start;
+}
+
+/* Columna izquierda (título + texto + card) */
+.contacto-info {
+    text-align: left;
+}
+
+/* Contenedor para limitar el ancho de la columna izquierda */
+.contacto-bloque {
+    max-width: 450px;
+}
+
+/* Estilos de texto */
+.contacto-titulo {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.contacto-parrafo {
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Email con efecto hover */
+.contacto-mail {
+    color: $rosa;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contacto-mail:hover {
+    color: $rosa-hover;
+    text-decoration: underline;
+}
+
+/* Estilos de la card */
+.contacto-card {
+    text-decoration: none;
+    color: $verde;
+    display: block;
+    /* Hace clickeable toda la tarjeta para que luego vaya a G Maps */
+}
+
+.contacto-card-inner {
+    @extend %card-base;
+    @extend %card-hover;
+}
+
+/* Imagen de la card */
+.contacto-card-inner img {
+    width: 100%;
+    display: block;
+}
+
+/* Textos de la card */
+.contacto-card-content {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.contacto-card-content h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.contacto-card-content h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+/* Formulario */
+.contacto-formulario {
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+}
+
+.contacto-form {
+    width: 100%;
+    max-width: 450px;
+}
+
+.contacto-input {
+    border-radius: 10px !important;
+    border: 1px solid #cfcfcf;
+    padding: 0.9rem !important;
+    font-size: 1rem !important;
+}
+
+/* Estado activo del campo */
+.contacto-input:focus {
+    border-color: $rosa;
+    box-shadow: 0 0 0 0.15rem $rosa-shadow;
+}
+
+/* Botón "Enviar" */
+.contacto-boton {
+    width: 100%;
+    background-color: $rosa;
+    border: none;
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+/* Hover del botón */
+.contacto-boton:hover {
+    background-color: $rosa-hover;
+    transition: background-color 0.3s ease;
+}
+
+/* =========================================
+MEDIA QUERY - CONTACTO
+========================================= */
+/* ---- Contacto - Responsive ---- */
+
+@include respond-between($tablet, $desktop) {
+
+    .contacto-info,
+    .contacto-formulario {
+        text-align: center;
+    }
+
+    .contacto-bloque,
+    .contacto-form {
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contacto-form {
+        margin-top: 2.5rem;
+        /* Espacio entre card y formulario */
+    }
+
+    .contacto-card-content {
+        text-align: center;
+    }
+}
+
+@media (max-width: $tablet) {
+
+    .contacto-info,
+    .contacto-formulario {
+        text-align: center;
+    }
+
+    .contacto-bloque,
+    .contacto-form {
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contacto-form {
+        margin-top: 2rem;
+    }
+
+    .contacto-card-content {
+        text-align: center;
+    }
+}

@@ -72,3 +72,18 @@ NAVBAR
     box-shadow: 0 0 0 3px $rosa-shadow;
     border-color: $rosa;
 }
+
+/* =========================================
+MEDIA QUERY - NAVBAR
+========================================= */
+/* ---- Navbar Responsive ---- */
+@include respond-max($desktop) {
+  .nav-pedido,
+  .nav-link {
+    display: inline-block;
+    width: auto;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    align-self: flex-start;
+  }
+}

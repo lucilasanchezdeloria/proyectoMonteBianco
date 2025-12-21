@@ -1,0 +1,147 @@
+/* =========================================
+SABORES
+========================================= */
+
+/* ---- Header ---- */
+.carousel-item img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ---- Main ---- */
+/* Contenedor general */
+.sabores-section {
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    color: $verde;
+}
+
+/* Layout categoría: texto izquierda – imágenes derecha */
+.sabores-encabezado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    width: 100%;
+}
+
+.sabores-categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+/* Títulos de categoría */
+.sabores-subtitulo {
+    color: $verde;
+    margin: 0 0 0.5rem;
+    text-align: left;
+    white-space: nowrap;
+
+}
+
+/* Grid de imágenes */
+.sabores-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: start;
+    margin-bottom: 1rem;
+    background: transparent;
+}
+
+/* Tamaño de las imágenes */
+.sabor-item {
+    width: 160px;
+    transition: transform 0.35s ease,
+        filter 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* Efecto hover */
+.sabor-item:hover {
+    transform: translateY(-8px) scale(1.05);
+    filter: drop-shadow(0 4px 10px $negro-18);
+    cursor: pointer;
+}
+
+/* Estilo de la lista de gustos */
+.sabores-lista {
+    list-style: disc !important;
+    padding-left: 1.5rem !important;
+    columns: 3;
+    column-gap: 4rem;
+    width: 100%;
+    max-width: 900px;
+    margin-left: 0;
+
+}
+
+/* =========================================
+MEDIA QUERY - SABORES
+========================================= */
+/* ---- Sabores- Responsive ---- */
+@include respond-max($desktop) {
+    .sabores-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sabor-item {
+        width: 140px;
+    }
+
+    /* Mostrar solo 3 imágenes */
+    .sabores-grid .sabor-item:nth-child(4) {
+        display: none;
+    }
+}
+
+@include respond-max($tablet) {
+    .sabores-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .sabor-item {
+        width: 120px;
+    }
+
+    .carousel-item img {
+        height: 55vh;
+    }
+
+    /* Mostrar solo 2 imágenes */
+    .sabores-grid .sabor-item:nth-child(3),
+    .sabores-grid .sabor-item:nth-child(4) {
+        display: none;
+    }
+}
+
+@include respond-max($mobile) {
+    .carousel-item img {
+        height: 45vh;
+    }
+}
+
+@include respond-max($mobile-small) {
+    .sabores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sabor-item {
+        width: 150px;
+    }
+
+    /* Mostrar solo 1 imagen */
+    .sabores-grid .sabor-item:nth-child(2),
+    .sabores-grid .sabor-item:nth-child(3),
+    .sabores-grid .sabor-item:nth-child(4) {
+        display: none;
+    }
+}
