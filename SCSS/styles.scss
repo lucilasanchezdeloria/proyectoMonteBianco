@@ -2,6 +2,10 @@
 @import "./utilities/mixins";
 @import "./utilities/extends";
 
+@import "./layout/navbar";
+@import "./layout/footer";
+
+
 /* =========================================
 1. ESTILOS GENERALES
 ========================================= */
@@ -57,81 +61,6 @@ body {
 .boton:hover {
     background-color: $rosa-hover;
     transition: background-color 0.3s ease;
-}
-
-/* =========================================
-2. NAVBAR
-========================================= */
-
-/* Tamaño del logotipo dentro de la navbar */
-.logotipo {
-    width: 6rem;
-}
-
-/* Link activo de la navbar
-   Uso !important para asegurar la prioridad de color y tipografía */
-.nav-link.active {
-    color: $rosa !important;
-    font-size: 1.125rem !important;
-    font-weight: 700 !important;
-}
-
-/* Estilo personalizado de los enlaces */
-.navbar-nav a {
-    color: $verde;
-    font-size: 1.125rem;
-    font-weight: 500;
-}
-
-/* Efecto hover en texto*/
-.navbar-nav .nav-item .nav-link:hover {
-    color: $rosa;
-    transition: color 0.2s ease;
-}
-
-/* Botón “Hacé tu pedido” */
-.nav-pedido a {
-    background-color: $rosa;
-    color: $blanco !important;
-    font-size: 1.125rem;
-    font-weight: 500;
-    border-radius: 10px;
-    padding: 0.4rem 1rem;
-    box-shadow: 0 6px 18px $rosa-shadow;
-    
-    @include transition;
-}
-
-/* Hover del botón */
-.nav-pedido a:hover {
-    background-color: $rosa-hover;
-    transition: background-color 0.3s ease;
-}
-
-/* Estilos del menú hamburguesa */
-.navbar-toggler {
-    border: 2px solid $rosa;
-    background-color: transparent;
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23D25B4B' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-.navbar-toggler[aria-expanded="true"] {
-    background-color: $rosa;
-    border-color: $rosa;
-}
-
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:focus-visible {
-    outline: none !important;
-    box-shadow: 0 0 0 3px $rosa-shadow;
-    border-color: $rosa;
 }
 
 /* =========================================
@@ -544,122 +473,6 @@ body {
     background-color: $rosa-hover;
     transition: background-color 0.3s ease;
 }
-
-/* =========================================
-7. FOOTER
-========================================= */
-
-/* Contenedor principal del footer */
-footer {
-    background-color: $verde;
-    color: $blanco;
-    padding: 3rem 2rem 1.5rem;
-    font-size: 1.125rem;
-    font-weight: 500;
-}
-
-/* Layout superior */
-.footer-top {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 6rem;
-    flex-wrap: wrap;
-    /* Permite que las columnas bajen en dispositivos pequeños */
-}
-
-/* Columna de redes sociales */
-.footer-social {
-  @include flex(column, flex-start, flex-start, 1rem);
-}
-
-/* Contenedor de los íconos de redes */
-.footer-social-icons {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-/* Estilos de texto*/
-.footer-heading {
-    margin: 0;
-    font-weight: 600;
-}
-
-/* Tamaño de los logos del footer */
-.index-footer-logos {
-    width: 3rem;
-}
-
-/* Efecto hover en íconos */
-.footer-social-icons img {
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.footer-social-icons img:hover {
-    transform: scale(1.15);
-    opacity: 0.8;
-}
-
-/* Reset de listas del footer */
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Columna de menú (izquierda) con línea vertical decorativa */
-.footer-menu {
-    position: relative;
-    padding-left: 2rem;
-}
-
-/* Línea vertical decorativa */
-.footer-menu::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background-color: $blanco;
-    border-radius: 10px;
-}
-
-/* Separación entre ítems del menú */
-footer li {
-    margin-bottom: 0.3rem;
-}
-
-/* Enlaces del footer */
-footer a {
-    background-color: $verde;
-    color: $blanco;
-    font-size: 1rem;
-    font-weight: 300;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #d1e8c5;
-    text-decoration: underline;
-    transition: color 0.2s ease;
-}
-
-footer p {
-    font-size: 0.4rem;
-    font-weight: 200;
-}
-
-/* Estilo del texto del copyright*/
-.footer-derechos {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    font-size: 0.6rem;
-    opacity: 0.8;
-}
-
 
 /* =========================================
 MEDIA QUERY - NAVBAR

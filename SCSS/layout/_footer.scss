@@ -1,0 +1,114 @@
+/* =========================================
+FOOTER
+========================================= */
+
+/* Contenedor principal del footer */
+footer {
+    background-color: $verde;
+    color: $blanco;
+    padding: 3rem 2rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* Layout superior */
+.footer-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6rem;
+    flex-wrap: wrap;
+    /* Permite que las columnas bajen en dispositivos pequeños */
+}
+
+/* Columna de redes sociales */
+.footer-social {
+  @include flex(column, flex-start, flex-start, 1rem);
+}
+
+/* Contenedor de los íconos de redes */
+.footer-social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+/* Estilos de texto*/
+.footer-heading {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Tamaño de los logos del footer */
+.index-footer-logos {
+    width: 3rem;
+}
+
+/* Efecto hover en íconos */
+.footer-social-icons img {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+/* Reset de listas del footer */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Columna de menú (izquierda) con línea vertical decorativa */
+.footer-menu {
+    position: relative;
+    padding-left: 2rem;
+}
+
+/* Línea vertical decorativa */
+.footer-menu::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: $blanco;
+    border-radius: 10px;
+}
+
+/* Separación entre ítems del menú */
+footer li {
+    margin-bottom: 0.3rem;
+}
+
+/* Enlaces del footer */
+footer a {
+    background-color: $verde;
+    color: $blanco;
+    font-size: 1rem;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d1e8c5;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+footer p {
+    font-size: 0.4rem;
+    font-weight: 200;
+}
+
+/* Estilo del texto del copyright*/
+.footer-derechos {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 0.6rem;
+    opacity: 0.8;
+}

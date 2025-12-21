@@ -1,0 +1,74 @@
+/* =========================================
+NAVBAR
+========================================= */
+
+/* Tamaño del logotipo dentro de la navbar */
+.logotipo {
+    width: 6rem;
+}
+
+/* Link activo de la navbar
+   Uso !important para asegurar la prioridad de color y tipografía */
+.nav-link.active {
+    color: $rosa !important;
+    font-size: 1.125rem !important;
+    font-weight: 700 !important;
+}
+
+/* Estilo personalizado de los enlaces */
+.navbar-nav a {
+    color: $verde;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* Efecto hover en texto*/
+.navbar-nav .nav-item .nav-link:hover {
+    color: $rosa;
+    transition: color 0.2s ease;
+}
+
+/* Botón “Hacé tu pedido” */
+.nav-pedido a {
+    background-color: $rosa;
+    color: $blanco !important;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 0.4rem 1rem;
+    box-shadow: 0 6px 18px $rosa-shadow;
+    
+    @include transition;
+}
+
+/* Hover del botón */
+.nav-pedido a:hover {
+    background-color: $rosa-hover;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos del menú hamburguesa */
+.navbar-toggler {
+    border: 2px solid $rosa;
+    background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23D25B4B' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler[aria-expanded="true"] {
+    background-color: $rosa;
+    border-color: $rosa;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 3px $rosa-shadow;
+    border-color: $rosa;
+}
