@@ -1,3 +1,12 @@
+/* =========================================
+MIXINS
+Este archivo agrupa mixins reutilizables del proyecto, como:
+- Transiciones
+- Flex
+- Botones
+- Media queries
+========================================= */
+
 /* Transiciones suaves */
 @mixin transition {
   transition: all 0.3s ease;

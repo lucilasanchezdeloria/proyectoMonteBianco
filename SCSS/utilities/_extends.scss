@@ -1,3 +1,11 @@
+/* =========================================
+EXTENDS
+Este archivo define estilos reutilizables en:
+- Headers
+- Párrafos
+- Cards
+========================================= */
+
 /* Header base con imagen */
 %header-base {
   position: relative;
@@ -14,7 +22,6 @@
   line-height: 1.6;
   color: $verde;
 }
-
 
 /* Card base reutilizable */
 %card-base {
