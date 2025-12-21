@@ -159,14 +159,14 @@ MEDIA QUERY - INDEX
 /* ---- Main - Responsive ---- */
 
 /* En tablet → 2 columnas */
-@media (max-width: $desktop) {
+@include respond-max($desktop) {
     .index-main-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* En mobile → 1 columna */
-@media (max-width: $mobile) {
+@include respond-max($mobile) {
     .index-main-grid {
         grid-template-columns: 1fr;
     }
@@ -175,7 +175,7 @@ MEDIA QUERY - INDEX
 /* ---- Section - Responsive ---- */
 
 /* En tablet → la imagen pasa arriba, texto abajo */
-@media (max-width: $desktop) {
+@include respond-max($desktop) {
     .index-section {
         grid-template-columns: 1fr;
         text-align: center;
@@ -188,7 +188,7 @@ MEDIA QUERY - INDEX
 }
 
 /* En mobile → ajuste del tamaño del texto para que se lea bien */
-@media (max-width: $mobile) {
+@include respond-max($mobile) {
     .index-section-parrafo {
         font-size: 1.1rem;
     }

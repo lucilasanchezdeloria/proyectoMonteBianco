@@ -100,7 +100,7 @@ MEDIA QUERY - HISTORIA
 }
 
 /* ---- Main - Responsive ---- */
-@media (max-width: $mobile) {
+@include respond-max($mobile) {
     .historia-linea-tiempo {
         border-left: 2px solid $verde;
         padding-left: 0.8rem;

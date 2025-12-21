@@ -21,19 +21,12 @@ Estilos específicos de la página de Nuestros Sabores.
 
 /* Layout categoría: texto izquierda – imágenes derecha */
 .sabores-encabezado {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2rem;
+    @include flex(row, flex-start, center, 2rem);
     width: 100%;
 }
 
 .sabores-categoria {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
+    @include flex(column, flex-start, flex-start, 1.5rem);
     margin-bottom: 4rem;
     width: 100%;
 }

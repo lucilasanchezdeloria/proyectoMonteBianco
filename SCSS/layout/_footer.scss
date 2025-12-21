@@ -14,12 +14,8 @@ footer {
 
 /* Layout superior */
 .footer-top {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 6rem;
+    @include flex(row, flex-start, flex-start, 6rem);
     flex-wrap: wrap;
-    /* Permite que las columnas bajen en dispositivos pequeños */
 }
 
 /* Columna de redes sociales */
@@ -29,9 +25,7 @@ footer {
 
 /* Contenedor de los íconos de redes */
 .footer-social-icons {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    @include flex(row, flex-start, center, 1rem);
 }
 
 /* Estilos de texto*/
@@ -147,7 +141,7 @@ MEDIA QUERY - FOOTER
     }
 }
 
-@media (max-width: $mobile) {
+@include respond-max($mobile) {
 
     /* Columnas apiladas */
     .footer-top {
@@ -166,12 +160,6 @@ MEDIA QUERY - FOOTER
 
     .footer-menu {
         padding-left: 1rem;
-    }
-
-    .footer-menu::before {
-        width: 2px;
-        height: 100%;
-        left: 0;
     }
 
     footer a {

@@ -1,8 +1,39 @@
 @charset "UTF-8";
+/* =========================================
+STYLES SCSS
+Este archivo contiene:
+- Utilities (variables, mixins, extends)
+- Layout (navbar, footer)
+- Pages (index, historia, sabores, contacto)
+- Estilos generales
+========================================= */
+/* =========================================
+VARIABLES
+Este archivo contiene todas las variables del proyecto:
+- Colores
+- Tipografías
+- Breakpoints
+- Sombras y opacidades
+========================================= */
+/* =========================================
+MIXINS
+Este archivo agrupa mixins reutilizables del proyecto, como:
+- Transiciones
+- Flex
+- Botones
+- Media queries
+========================================= */
 /* Transiciones suaves */
 /* Flexbox rápido */
 /* Botón base */
 /* Media queries */
+/* =========================================
+EXTENDS
+Este archivo define estilos reutilizables en:
+- Headers
+- Párrafos
+- Cards
+========================================= */
 /* Header base con imagen */
 .historia-header, .index-header {
   position: relative;
@@ -37,6 +68,8 @@
 
 /* =========================================
 NAVBAR
+Estilos correspondientes a la barra de navegación
+del sitio.
 ========================================= */
 /* Tamaño del logotipo dentro de la navbar */
 .logotipo {
@@ -124,6 +157,7 @@ MEDIA QUERY - NAVBAR
 }
 /* =========================================
 FOOTER
+Estilos correspondientes al footer del sitio.
 ========================================= */
 /* Contenedor principal del footer */
 footer {
@@ -137,11 +171,11 @@ footer {
 /* Layout superior */
 .footer-top {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 6rem;
   flex-wrap: wrap;
-  /* Permite que las columnas bajen en dispositivos pequeños */
 }
 
 /* Columna de redes sociales */
@@ -157,6 +191,8 @@ footer {
 .footer-social-icons {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -282,11 +318,6 @@ MEDIA QUERY - FOOTER
   .footer-menu {
     padding-left: 1rem;
   }
-  .footer-menu::before {
-    width: 2px;
-    height: 100%;
-    left: 0;
-  }
   footer a {
     font-size: 0.95rem;
   }
@@ -303,6 +334,7 @@ MEDIA QUERY - FOOTER
 }
 /* =========================================
 INDEX
+Estilos específicos de la página de Inicio.
 ========================================= */
 /* ---- Header ---- */
 .index-header {
@@ -477,6 +509,7 @@ MEDIA QUERY - INDEX
 }
 /* =========================================
 HISTORIA
+Estilos específicos de la página de Nuestra Historia.
 ========================================= */
 /* ---- Header ---- */
 .historia-header {
@@ -580,6 +613,7 @@ MEDIA QUERY - HISTORIA
 }
 /* =========================================
 SABORES
+Estilos específicos de la página de Nuestros Sabores.
 ========================================= */
 /* ---- Header ---- */
 .carousel-item img {
@@ -601,8 +635,8 @@ SABORES
 .sabores-encabezado {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
   gap: 2rem;
   width: 100%;
 }
@@ -610,6 +644,7 @@ SABORES
 .sabores-categoria {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
   margin-bottom: 4rem;
@@ -712,6 +747,7 @@ MEDIA QUERY - SABORES
 }
 /* =========================================
 CONTACTO
+Estilos específicos de la página de Contacto.
 ========================================= */
 /* Espacio exterior de la sección */
 .contacto-layout {
@@ -936,7 +972,6 @@ body {
 /* Hover del botón */
 .boton:hover {
   background-color: #b84f41;
-  transition: background-color 0.3s ease;
 }
 
 /*# sourceMappingURL=styles.css.map */

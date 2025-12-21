@@ -163,7 +163,7 @@ MEDIA QUERY - CONTACTO
     }
 }
 
-@media (max-width: $tablet) {
+@include respond-max($tablet) {
 
     .contacto-info,
     .contacto-formulario {
