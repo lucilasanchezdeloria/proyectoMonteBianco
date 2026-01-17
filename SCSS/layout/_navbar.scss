@@ -49,6 +49,11 @@ del sitio.
     transition: background-color 0.3s ease;
 }
 
+/* Sombra en el margen inferior */
+.navbar {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 /* Estilos del menú hamburguesa */
 .navbar-toggler {
     border: 2px solid $rosa;
