@@ -967,7 +967,7 @@ TU LADO HELADO
   color: #4A5E3D;
 }
 
-/* Intro */
+/* ---------- INTRO ---------- */
 .helado-intro {
   text-align: center;
   margin-bottom: 4rem;
@@ -979,32 +979,69 @@ TU LADO HELADO
 
 /* ---------- FORM ---------- */
 .helado-form {
-  max-width: 700px;
+  max-width: 1100px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 
-/* Preguntas */
+/* ---------- PREGUNTAS ---------- */
 .helado-pregunta {
   border: none;
   margin-bottom: 3.5rem;
 }
 .helado-pregunta legend {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.2rem;
+  max-width: 420px;
+  line-height: 1.3;
 }
-.helado-pregunta label {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
+.helado-pregunta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+/* ---------- OPCIONES (CARDS) ---------- */
+.helado-opcion {
+  position: relative;
   cursor: pointer;
 }
-.helado-pregunta input[type=radio] {
-  accent-color: #D25B4B;
+.helado-opcion input {
+  display: none;
+}
+.helado-opcion span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  min-width: 180px;
+  padding: 1.2rem 1.4rem;
+  border-radius: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.helado-opcion {
+  /* Hover */
+}
+.helado-opcion:hover span {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- OPCIÓN SELECCIONADA ---------- */
+.helado-opcion input:checked + span {
+  background-color: #D25B4B;
+  color: #ffffff;
+  box-shadow: 0 14px 32px rgba(210, 91, 75, 0.35);
+  transform: translateY(-2px) scale(1.02);
 }
 
 /* ---------- RESULTADOS ---------- */
@@ -1024,6 +1061,12 @@ TU LADO HELADO
 .resultado {
   padding: 2.5rem;
   margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.4;
+  transform: scale(0.95);
+  transition: all 0.4s ease;
 }
 .resultado h3 {
   margin-bottom: 0.6rem;
@@ -1031,6 +1074,12 @@ TU LADO HELADO
 .resultado p {
   font-size: 1.05rem;
   font-weight: 400;
+}
+
+/* Feedback visual */
+.resultado:hover {
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* ---------- CTA ---------- */
@@ -1059,6 +1108,11 @@ TU LADO HELADO
   }
   .resultado {
     padding: 2rem 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .helado-pregunta {
+    grid-template-columns: 1fr;
   }
 }
 /* =========================================
