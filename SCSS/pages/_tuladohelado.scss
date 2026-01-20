@@ -19,7 +19,7 @@ TU LADO HELADO
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(255, 255, 255, 0.35);
+   
 
     @include flex(column, center, flex-start, 1.2rem);
     padding-left: 4rem;
@@ -27,11 +27,13 @@ TU LADO HELADO
 
     h1 {
         margin-bottom: 0.5rem;
+        color: $verde;
     }
 
     p {
         @extend %parrafo-base;
         max-width: 420px;
+        color: $verde;
     }
 }
 
@@ -60,13 +62,13 @@ TU LADO HELADO
 
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 1rem;
 }
 
 /* ---------- PREGUNTAS ---------- */
 .helado-pregunta {
     border: none;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1rem;
 
     legend {
         font-size: 1.6rem;
@@ -108,13 +110,21 @@ TU LADO HELADO
         font-weight: 600;
         text-align: center;
 
-        transition: all 0.3s ease;
+        transition:
+            transform 0.25s cubic-bezier(.2, .7, .3, 1),
+            box-shadow 0.25s ease,
+            background-color 0.25s ease;
     }
 
     /* Hover */
     &:hover span {
         transform: translateY(-4px);
         box-shadow: 0 12px 28px $negro-25;
+    }
+
+    input:checked+span {
+        transform: translateY(0) scale(1.02);
+        box-shadow: 0 14px 32px $rosa-shadow;
     }
 }
 
@@ -128,14 +138,14 @@ TU LADO HELADO
 
 /* ---------- RESULTADOS ---------- */
 .helado-resultado {
-    margin-top: 5rem;
+    margin-top: 1rem;
     text-align: center;
 }
 
 .resultado-intro {
     font-size: 1.3rem;
     font-weight: 500;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     opacity: 0.85;
 }
 
@@ -147,9 +157,14 @@ TU LADO HELADO
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.4;
-    transform: scale(0.95);
-    transition: all 0.4s ease;
+
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+    filter: blur(4px);
+
+    transition: opacity 0.4s ease,
+        transform 0.45s ease,
+        filter 0.4s ease;
 
     h3 {
         margin-bottom: 0.6rem;
@@ -161,20 +176,17 @@ TU LADO HELADO
     }
 }
 
-/* Feedback visual */
-.resultado:hover {
-    opacity: 1;
-    transform: scale(1);
-}
-
 /* ---------- CTA ---------- */
 .resultado-cta {
-    margin-top: 4rem;
+    margin-top: 2rem;
     text-align: center;
 
     p {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        letter-spacing: 0.2px;
+        color: $verde;
     }
 }
 
@@ -204,4 +216,46 @@ TU LADO HELADO
     .helado-pregunta {
         grid-template-columns: 1fr;
     }
+}
+
+/* =========================================
+LOGICA FINAL DEL RESULTADO
+(depende solo de la pregunta 4)
+========================================= */
+
+.helado-form:has(input[name="resultado"][value="vainilla"]:checked) .resultado-vainilla {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.helado-form:has(input[name="resultado"][value="chocolate"]:checked) .resultado-chocolate {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.helado-form:has(input[name="resultado"][value="frutilla"]:checked) .resultado-frutilla {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.helado-form:has(input[name="resultado"][value="limon"]:checked) .resultado-limon {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+/* Solo un resultado visible a la vez */
+.helado-resultado .resultado {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+}
+
+.helado-resultado {
+    position: relative;
+    min-height: 300px;
 }
