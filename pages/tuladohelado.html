@@ -52,7 +52,7 @@
     </nav>
 
     <header class="hero-helado">
-        <video class="hero-video" autoplay muted loop playsinline>
+        <video class="hero-video" autoplay muted loop playsinline aria-label="Video artístico sobre personas y helado">
             <source src="../img/hero-helado.mp4" type="video/mp4">
             Tu navegador no soporta video HTML5.
         </video>
@@ -60,103 +60,157 @@
         <div class="hero-overlay">
             <h1>Tu lado helado</h1>
             <p>Descubrí qué dice tu sabor favorito sobre vos</p>
-            <a href="#test-helado" class="boton">Empezar</a>
+            <a href="#helado-test" class="boton">Empezar</a>
         </div>
     </header>
 
     <!-- TEST -->
-    <main id="test-helado" class="test-helado container">
+    <main id="helado-test" class="helado-test container">
 
-        <section class="test-intro">
+        <section class="helado-intro">
             <h2>Elegí sin pensar demasiado</h2>
             <p>No hay respuestas correctas. Solo gustos.</p>
         </section>
 
-        <form class="test-form">
+        <form class="helado-form">
 
             <!-- PREGUNTA 1 -->
-            <fieldset class="test-pregunta">
+            <fieldset class="helado-pregunta">
                 <legend>¿Cómo te definirías hoy?</legend>
 
-                <label>
+                <label class="helado-opcion">
                     <input type="radio" name="estado" checked>
-                    Tranquilo
+                    <span>Tranquilo</span>
                 </label>
 
-                <label>
+                <label class="helado-opcion">
                     <input type="radio" name="estado">
-                    Energético
+                    <span>Energético</span>
                 </label>
 
-                <label>
+                <label class="helado-opcion">
                     <input type="radio" name="estado">
-                    Intenso
+                    <span>Intenso</span>
                 </label>
 
-                <label>
+                <label class="helado-opcion">
                     <input type="radio" name="estado">
-                    Creativo
+                    <span>Creativo</span>
                 </label>
             </fieldset>
 
             <!-- PREGUNTA 2 -->
-            <fieldset class="test-pregunta">
+            <fieldset class="helado-pregunta">
                 <legend>¿Qué te atrae más?</legend>
 
-                <label>
+                <label class="helado-opcion">
                     <input type="radio" name="sensacion" checked>
-                    Lo clásico
+                    <span>Lo clásico</span>
                 </label>
 
-                <label>
+                <label class="helado-opcion">
                     <input type="radio" name="sensacion">
-                    Lo dulce
+                    <span>Lo dulce</span>
                 </label>
 
-                <label>
+                <label class="helado-opcion">
                     <input type="radio" name="sensacion">
-                    Lo fresco
+                    <span>Lo fresco</span>
                 </label>
 
-                <label>
+                <label class="helado-opcion">
                     <input type="radio" name="sensacion">
-                    Algo distinto
+                    <span>Algo distinto</span>
                 </label>
             </fieldset>
 
+            <!-- PREGUNTA 3 -->
+            <fieldset class="helado-pregunta">
+                <legend>Cuando tenés un momento solo para vos, ¿qué valorás más?</legend>
+
+                <label class="helado-opcion">
+                    <input type="radio" name="momento" checked>
+                    <span>La calma</span>
+                </label>
+
+                <label class="helado-opcion">
+                    <input type="radio" name="momento">
+                    <span>La intensidad</span>
+                </label>
+
+                <label class="helado-opcion">
+                    <input type="radio" name="momento">
+                    <span>La sorpresa</span>
+                </label>
+
+                <label class="helado-opcion">
+                    <input type="radio" name="momento">
+                    <span>La inspiración</span>
+                </label>
+            </fieldset>
+
+            <!-- PREGUNTA 4 -->
+            <fieldset class="helado-pregunta">
+                <legend>Si tuvieras que elegir una experiencia, ¿cuál se te parece más?</legend>
+
+                <label class="helado-opcion">
+                    <input type="radio" name="experiencia" checked>
+                    <span>Algo simple y bien hecho</span>
+                </label>
+
+                <label class="helado-opcion">
+                    <input type="radio" name="experiencia">
+                    <span>Algo intenso que deje huella</span>
+                </label>
+
+                <label class="helado-opcion">
+                    <input type="radio" name="experiencia">
+                    <span>Algo fresco y liviano</span>
+                </label>
+
+                <label class="helado-opcion">
+                    <input type="radio" name="experiencia">
+                    <span>Algo distinto, que sorprenda</span>
+                </label>
+            </fieldset>
+
+
             <!-- RESULTADOS -->
-            <section class="test-resultado">
+            <section class="helado-resultado">
 
-                <div class="resultado resultado-vainilla">
+                <p class="resultado-intro">Hoy tu lado se parece a…</p>
+
+                <article class="resultado resultado-vainilla">
                     <h3>Vainilla</h3>
-                    <p>Clásico, auténtico y amante de las cosas simples.</p>
-                </div>
+                    <p>Clásico, auténtico. Encontrás placer en lo simple y bien hecho.</p>
+                </article>
 
-                <div class="resultado resultado-chocolate">
+                <article class="resultado resultado-chocolate">
                     <h3>Chocolate</h3>
-                    <p>Intenso, carismático y con mucha presencia.</p>
-                </div>
+                    <p>Intenso y expresivo. Vivís las cosas con cuerpo y emoción.</p>
+                </article>
 
-                <div class="resultado resultado-frutilla">
+                <article class="resultado resultado-frutilla">
                     <h3>Frutilla</h3>
-                    <p>Dulce, optimista y contagia alegría.</p>
-                </div>
+                    <p>Luminoso y sensible. Te mueve lo dulce, lo liviano, lo que se comparte.</p>
+                </article>
 
-                <div class="resultado resultado-limon">
+                <article class="resultado resultado-limon">
                     <h3>Limón</h3>
-                    <p>Directo, fresco y sin vueltas.</p>
-                </div>
-
-                <!-- CTA -->
-                <div class="resultado-cta">
-                    <p>¿Te dieron ganas de probarlo?</p>
-                    <a href="https://www.pedidosya.com.ar/restaurantes/moron/monte-bianco-moron-heladeria-9fc86f76-2afe-41be-acb7-e6aad1b3eb10-menu"
-                        target="_blank" class="boton">
-                        Pedí tu helado
-                    </a>
-                </div>
+                    <p>Directo y fresco. Preferís lo claro, sin exceso, sin vueltas.</p>
+                </article>
 
             </section>
+
+
+            <!-- CTA -->
+            <div class="resultado-cta">
+                <p>¿Te dieron ganas de probarlo?</p>
+                <a href="https://www.pedidosya.com.ar/restaurantes/moron/monte-bianco-moron-heladeria-9fc86f76-2afe-41be-acb7-e6aad1b3eb10-menu"
+                    target="_blank" class="boton">
+                    Pedí tu helado
+                </a>
+            </div>
 
         </form>
 

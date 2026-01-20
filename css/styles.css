@@ -35,7 +35,7 @@ Este archivo define estilos reutilizables en:
 - Cards
 ========================================= */
 /* Header base con imagen */
-.historia-header, .index-header {
+.hero-helado, .historia-header, .index-header {
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,7 +44,7 @@ Este archivo define estilos reutilizables en:
 }
 
 /* Párrafo base */
-.historia-parrafo, .index-main-parrafo {
+.helado-intro p, .hero-overlay p, .historia-parrafo, .index-main-parrafo {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.6;
@@ -52,7 +52,7 @@ Este archivo define estilos reutilizables en:
 }
 
 /* Card base reutilizable */
-.contacto-card-inner, .index-main-card {
+.resultado, .contacto-card-inner, .index-main-card {
   background-color: #ffffff;
   border-radius: 20px;
   overflow: hidden;
@@ -924,6 +924,141 @@ MEDIA QUERY - CONTACTO
   }
   .contacto-card-content {
     text-align: center;
+  }
+}
+/* =========================================
+TU LADO HELADO
+========================================= */
+/* ---------- HERO ---------- */
+.hero-helado {
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding-left: 4rem;
+  max-width: 600px;
+}
+.hero-overlay h1 {
+  margin-bottom: 0.5rem;
+}
+.hero-overlay p {
+  max-width: 420px;
+}
+
+/* ---------- TEST ---------- */
+.helado-test {
+  margin: 5rem auto;
+  color: #4A5E3D;
+}
+
+/* Intro */
+.helado-intro {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.helado-intro p {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ---------- FORM ---------- */
+.helado-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Preguntas */
+.helado-pregunta {
+  border: none;
+  margin-bottom: 3.5rem;
+}
+.helado-pregunta legend {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.helado-pregunta label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+.helado-pregunta input[type=radio] {
+  accent-color: #D25B4B;
+}
+
+/* ---------- RESULTADOS ---------- */
+.helado-resultado {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.resultado-intro {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  opacity: 0.85;
+}
+
+/* Cards de resultado */
+.resultado {
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+.resultado h3 {
+  margin-bottom: 0.6rem;
+}
+.resultado p {
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+/* ---------- CTA ---------- */
+.resultado-cta {
+  margin-top: 4rem;
+  text-align: center;
+}
+.resultado-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .hero-overlay {
+    padding: 0 2rem;
+    max-width: 100%;
+  }
+  .helado-form {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .hero-helado {
+    height: 65vh;
+  }
+  .resultado {
+    padding: 2rem 1.5rem;
   }
 }
 /* =========================================
