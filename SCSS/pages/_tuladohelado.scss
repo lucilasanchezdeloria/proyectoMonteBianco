@@ -1,8 +1,9 @@
 /* =========================================
 TU LADO HELADO
+Estilos específicos de la página de Tu Lado Helado.
 ========================================= */
 
-/* ---------- HERO ---------- */
+/* ---- Header ---- */
 .hero-helado {
     @extend %header-base;
     position: relative;
@@ -37,13 +38,13 @@ TU LADO HELADO
     }
 }
 
-/* ---------- TEST ---------- */
+/* ---- Test ---- */
 .helado-test {
     margin: 5rem auto;
     color: $verde;
 }
 
-/* ---------- INTRO ---------- */
+/* ---- Introducción ---- */
 .helado-intro {
     text-align: center;
     margin-bottom: 4rem;
@@ -55,7 +56,7 @@ TU LADO HELADO
     }
 }
 
-/* ---------- FORM ---------- */
+/* ---- Formulario ---- */
 .helado-form {
     max-width: 1100px;
     margin: 0 auto;
@@ -65,7 +66,7 @@ TU LADO HELADO
     gap: 1rem;
 }
 
-/* ---------- PREGUNTAS ---------- */
+/* ---- Preguntas ---- */
 .helado-pregunta {
     border: none;
     margin-bottom: 1rem;
@@ -84,7 +85,7 @@ TU LADO HELADO
     align-items: stretch;
 }
 
-/* ---------- OPCIONES (CARDS) ---------- */
+/* ---- Opciones de cards ---- */
 .helado-opcion {
     position: relative;
     cursor: pointer;
@@ -127,7 +128,7 @@ TU LADO HELADO
     }
 }
 
-/* ---------- OPCIÓN SELECCIONADA ---------- */
+/* ---- Opción seleccionada ---- */
 .helado-opcion input:checked+span {
     background-color: $rosa;
     color: $blanco;
@@ -135,7 +136,7 @@ TU LADO HELADO
     transform: translateY(-2px) scale(1.02);
 }
 
-/* ---------- RESULTADOS ---------- */
+/* ---- Resultados ---- */
 .helado-resultado {
     margin-top: 1rem;
     text-align: center;
@@ -175,7 +176,7 @@ TU LADO HELADO
     }
 }
 
-/* ---------- CTA ---------- */
+/* ---- CTA ---- */
 .resultado-cta {
     margin-top: 2rem;
     text-align: center;
@@ -189,7 +190,10 @@ TU LADO HELADO
     }
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* =========================================
+MEDIA QUERY - TU LADO HELADO
+========================================= */
+/* ---- Tu Lado Helado- Responsive ---- */
 @include respond-max($tablet) {
     .hero-overlay {
         padding: 0 2rem;
