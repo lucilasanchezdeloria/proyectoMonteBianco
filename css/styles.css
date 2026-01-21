@@ -1089,12 +1089,16 @@ Estilos específicos de la página de Tu Lado Helado.
 /* ---- CTA ---- */
 .resultado-cta {
   margin-top: 2rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background-color: rgba(210, 91, 75, 0.12);
+  border-radius: 24px;
   text-align: center;
 }
 .resultado-cta p {
   font-size: 1.35rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
   letter-spacing: 0.2px;
   color: #4A5E3D;
 }
@@ -1163,7 +1167,8 @@ LOGICA FINAL DEL RESULTADO
 
 .helado-resultado {
   position: relative;
-  min-height: 300px;
+  min-height: 350px;
+  margin-bottom: 5rem;
 }
 
 /* =========================================
