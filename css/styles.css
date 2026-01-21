@@ -1072,6 +1072,12 @@ Estilos específicos de la página de Tu Lado Helado.
   filter: blur(4px);
   transition: opacity 0.4s ease, transform 0.45s ease, filter 0.4s ease;
 }
+.resultado .resultado-img {
+  width: 140px;
+  height: auto;
+  margin: 0 auto 1.2rem;
+  display: block;
+}
 .resultado h3 {
   margin-bottom: 0.6rem;
 }
