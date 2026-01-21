@@ -4,6 +4,10 @@ Estilos específicos de la página de Inicio.
 ========================================= */
 
 /* ---- Header ---- */
+.site-header {
+  position: relative;
+}
+
 .index-header {
     @extend %header-base;
     background-image: url(../img/homebanner.jpg);

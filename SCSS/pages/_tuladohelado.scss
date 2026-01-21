@@ -4,6 +4,10 @@ Estilos específicos de la página de Tu Lado Helado.
 ========================================= */
 
 /* ---- Header ---- */
+.site-header {
+  position: relative;
+}
+
 .hero-helado {
     @extend %header-base;
     position: relative;

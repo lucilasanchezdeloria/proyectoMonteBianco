@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
             <div class="container-fluid">
                 <img class="logotipo" src="../img/montebiancologo.png" alt="Logo Monte Bianco">
@@ -58,7 +58,7 @@
         <div class="row gx-5 align-items-center">
             <div class="col-lg-6 contacto-info">
 
-                <div class="contacto-bloque">
+                <section class="contacto-bloque">
                     <h1 class="contacto-h1">Contacto</h1>
                     <h2 class="contacto-titulo">¿Cómo podemos ayudarte?</h2>
 
@@ -81,19 +81,29 @@
                             </div>
                         </div>
                     </a>
-                </div>
+                </section>
 
             </div>
 
             <div class="col-lg-6 contacto-formulario">
-                <form class="contacto-form">
-                    <input type="text" class="form-control contacto-input mb-3" placeholder="Nombre" name="nombre">
-                    <input type="email" class="form-control contacto-input mb-3" placeholder="E-mail" name="email">
-                    <textarea class="form-control contacto-input mb-3" rows="4" placeholder="Mensaje"
-                        name="mensaje"></textarea>
+                <form class="contacto-form" action="#" method="post">
+
+                    <label for="nombre" class="visually-hidden">Nombre</label>
+                    <input id="nombre" type="text" class="form-control contacto-input mb-3" name="nombre"
+                        placeholder="Nombre" required>
+
+                    <label for="email" class="visually-hidden">E-mail</label>
+                    <input id="email" type="email" class="form-control contacto-input mb-3" name="email"
+                        placeholder="E-mail" required>
+
+                    <label for="mensaje" class="visually-hidden">Mensaje</label>
+                    <textarea id="mensaje" class="form-control contacto-input mb-3" rows="4" name="mensaje"
+                        placeholder="Mensaje" required></textarea>
 
                     <button type="submit" class="contacto-boton">ENVIAR</button>
+
                 </form>
+
             </div>
 
         </div>

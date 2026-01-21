@@ -4,6 +4,10 @@ Estilos específicos de la página de Nuestra Historia.
 ========================================= */
 
 /* ---- Header ---- */
+.site-header {
+  position: relative;
+}
+
 .historia-header {
     @extend %header-base;
     background-image: url(../img/historiabanner.jpg);

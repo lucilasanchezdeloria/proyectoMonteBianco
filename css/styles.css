@@ -343,6 +343,10 @@ INDEX
 Estilos específicos de la página de Inicio.
 ========================================= */
 /* ---- Header ---- */
+.site-header {
+  position: relative;
+}
+
 .index-header {
   background-image: url(../img/homebanner.jpg);
 }
@@ -518,6 +522,10 @@ HISTORIA
 Estilos específicos de la página de Nuestra Historia.
 ========================================= */
 /* ---- Header ---- */
+.site-header {
+  position: relative;
+}
+
 .historia-header {
   background-image: url(../img/historiabanner.jpg);
 }
@@ -622,6 +630,10 @@ SABORES
 Estilos específicos de la página de Nuestros Sabores.
 ========================================= */
 /* ---- Header ---- */
+.site-header {
+  position: relative;
+}
+
 .carousel-item img {
   width: 100%;
   height: 75vh;
@@ -755,6 +767,11 @@ MEDIA QUERY - SABORES
 CONTACTO
 Estilos específicos de la página de Contacto.
 ========================================= */
+/* ---- Header ---- */
+.site-header {
+  position: relative;
+}
+
 /* Espacio exterior de la sección */
 .contacto-layout {
   padding: 4rem 0;
@@ -932,6 +949,10 @@ TU LADO HELADO
 Estilos específicos de la página de Tu Lado Helado.
 ========================================= */
 /* ---- Header ---- */
+.site-header {
+  position: relative;
+}
+
 .hero-helado {
   position: relative;
   height: 85vh;
