@@ -40,7 +40,7 @@ Estilos específicos de la página de Tu Lado Helado.
 
 /* ---- Test ---- */
 .helado-test {
-    margin: 5rem auto;
+    margin: $spacing-lg auto;
     color: $verde;
 }
 
@@ -103,9 +103,8 @@ Estilos específicos de la página de Tu Lado Helado.
         min-width: 180px;
         padding: 1.2rem 1.4rem;
 
-        border-radius: 14px;
+        @include card-elevation(0 6px 18px $negro-18);
         background-color: $blanco;
-        box-shadow: 0 6px 18px $negro-18;
 
         font-size: 1.05rem;
         font-weight: 600;
@@ -152,19 +151,13 @@ Estilos específicos de la página de Tu Lado Helado.
 /* Cards de resultado */
 .resultado {
     @extend %card-base;
+    @include reveal-card;
+
     padding: 2.5rem;
     margin-bottom: 2rem;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-
-    opacity: 0;
-    transform: translateY(20px) scale(0.96);
-    filter: blur(4px);
-
-    transition: opacity 0.4s ease,
-        transform 0.45s ease,
-        filter 0.4s ease;
 
     .resultado-img {
         width: 140px;
@@ -185,7 +178,7 @@ Estilos específicos de la página de Tu Lado Helado.
 
 /* ---- CTA ---- */
 .resultado-cta {
-    margin-top: 2rem;
+    margin-top: $spacing-lg;
     padding: 2.5rem 2rem;
     text-align: center;
     background-color: rgba($rosa, 0.12);
@@ -200,7 +193,7 @@ Estilos específicos de la página de Tu Lado Helado.
         color: $verde;
     }
 
-    
+
 }
 
 /* =========================================

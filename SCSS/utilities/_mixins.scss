@@ -13,12 +13,10 @@ Este archivo agrupa mixins reutilizables del proyecto, como:
 }
 
 /* Flexbox rápido */
-@mixin flex(
-  $direction: row,
+@mixin flex($direction: row,
   $justify: flex-start,
   $align: stretch,
-  $gap: 0
-) {
+  $gap: 0) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
@@ -33,6 +31,23 @@ Este archivo agrupa mixins reutilizables del proyecto, como:
   border-radius: 10px;
   font-weight: 700;
   @include transition;
+}
+
+/* Card resultado Tu Lado Helado */
+@mixin reveal-card {
+  opacity: 0;
+  transform: translateY(20px) scale(0.96);
+  filter: blur(4px);
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.45s ease,
+    filter 0.4s ease;
+}
+
+@mixin card-elevation($shadow) {
+    border-radius: 14px;
+    box-shadow: $shadow;
 }
 
 /* Media queries */
