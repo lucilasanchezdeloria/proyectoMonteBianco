@@ -67,6 +67,7 @@ Este archivo define estilos reutilizables en:
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.25);
 }
 
+/* Hero - títulos y textos */
 /* =========================================
 NAVBAR
 Estilos correspondientes a la barra de navegación
@@ -1077,11 +1078,11 @@ Estilos específicos de la página de Tu Lado Helado.
 }
 .hero-overlay h1 {
   margin-bottom: 0.5rem;
-  color: #4A5E3D;
+  color: #D25B4B;
 }
 .hero-overlay p {
   max-width: 420px;
-  color: #4A5E3D;
+  color: #D25B4B;
 }
 
 /* ---- Test ---- */
@@ -1225,32 +1226,6 @@ Estilos específicos de la página de Tu Lado Helado.
 }
 
 /* =========================================
-MEDIA QUERY - TU LADO HELADO
-========================================= */
-/* ---- Tu Lado Helado- Responsive ---- */
-@media (max-width: 768px) {
-  .hero-overlay {
-    padding: 0 2rem;
-    max-width: 100%;
-  }
-  .helado-form {
-    padding: 0 1rem;
-  }
-}
-@media (max-width: 576px) {
-  .hero-helado {
-    height: 65vh;
-  }
-  .resultado {
-    padding: 2rem 1.5rem;
-  }
-}
-@media (max-width: 768px) {
-  .helado-pregunta {
-    grid-template-columns: 1fr;
-  }
-}
-/* =========================================
 LOGICA FINAL DEL RESULTADO
 (depende solo de la pregunta 4)
 ========================================= */
@@ -1292,6 +1267,32 @@ LOGICA FINAL DEL RESULTADO
   margin-bottom: 5rem;
 }
 
+/* =========================================
+MEDIA QUERY - TU LADO HELADO
+========================================= */
+/* ---- Tu Lado Helado- Responsive ---- */
+@media (max-width: 768px) {
+  .hero-overlay {
+    padding: 0 2rem;
+    max-width: 100%;
+  }
+  .helado-form {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .hero-helado {
+    height: 65vh;
+  }
+  .resultado {
+    padding: 2rem 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .helado-pregunta {
+    grid-template-columns: 1fr;
+  }
+}
 /* =========================================
 ESTILOS GENERALES
 ========================================= */

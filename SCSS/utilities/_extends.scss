@@ -40,3 +40,15 @@ Este archivo define estilos reutilizables en:
   }
 }
 
+/* Hero - títulos y textos */
+%hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+%hero-paragraph {
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.4;
+}

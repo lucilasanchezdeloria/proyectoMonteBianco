@@ -5,7 +5,7 @@ Estilos específicos de la página de Tu Lado Helado.
 
 /* ---- Header ---- */
 .site-header {
-  position: relative;
+    position: relative;
 }
 
 .hero-helado {
@@ -32,13 +32,13 @@ Estilos específicos de la página de Tu Lado Helado.
 
     h1 {
         margin-bottom: 0.5rem;
-        color: $verde;
+        color: $rosa;
     }
 
     p {
         @extend %parrafo-base;
         max-width: 420px;
-        color: $verde;
+        color: $rosa;
     }
 }
 
@@ -201,37 +201,6 @@ Estilos específicos de la página de Tu Lado Helado.
 }
 
 /* =========================================
-MEDIA QUERY - TU LADO HELADO
-========================================= */
-/* ---- Tu Lado Helado- Responsive ---- */
-@include respond-max($tablet) {
-    .hero-overlay {
-        padding: 0 2rem;
-        max-width: 100%;
-    }
-
-    .helado-form {
-        padding: 0 1rem;
-    }
-}
-
-@include respond-max($mobile) {
-    .hero-helado {
-        height: 65vh;
-    }
-
-    .resultado {
-        padding: 2rem 1.5rem;
-    }
-}
-
-@include respond-max($tablet) {
-    .helado-pregunta {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* =========================================
 LOGICA FINAL DEL RESULTADO
 (depende solo de la pregunta 4)
 ========================================= */
@@ -272,4 +241,36 @@ LOGICA FINAL DEL RESULTADO
     position: relative;
     min-height: 350px;
     margin-bottom: 5rem;
+}
+
+
+/* =========================================
+MEDIA QUERY - TU LADO HELADO
+========================================= */
+/* ---- Tu Lado Helado- Responsive ---- */
+@include respond-max($tablet) {
+    .hero-overlay {
+        padding: 0 2rem;
+        max-width: 100%;
+    }
+
+    .helado-form {
+        padding: 0 1rem;
+    }
+}
+
+@include respond-max($mobile) {
+    .hero-helado {
+        height: 65vh;
+    }
+
+    .resultado {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@include respond-max($tablet) {
+    .helado-pregunta {
+        grid-template-columns: 1fr;
+    }
 }
