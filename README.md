@@ -113,8 +113,13 @@ El sitio fue desarrollado teniendo en cuenta principios básicos de SEO on-page,
 
 
 **Estado del proyecto**
+
 ✅ Estructura SCSS completa
+
 ✅ Variables, mixins y extends implementados
+
 ✅ Layout y pages separadas en partials
+
 ✅ Diseño responsive en todas las vistas
+
 ✅ Bases de SEO on-page aplicadas
