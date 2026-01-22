@@ -89,6 +89,7 @@ Partials organizados por responsabilidad
 
 
 **SEO y buenas prácticas implementadas**
+
 El sitio fue desarrollado teniendo en cuenta principios básicos de SEO on-page, enfocados en mejorar la indexación y la accesibilidad:
 - Uso correcto de HTML semántico (header, main, section, footer, nav)
 - Jerarquía clara de títulos (h1, h2, h3)
