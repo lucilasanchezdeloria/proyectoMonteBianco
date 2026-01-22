@@ -1032,6 +1032,16 @@ MEDIA QUERY - CONTACTO
   .contacto-card-content {
     text-align: center;
   }
+  .contacto-layout {
+    padding: 4rem 1.25rem;
+  }
+  .contacto-layout > .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .contacto-card-inner {
+    width: 100%;
+  }
 }
 /* =========================================
 TU LADO HELADO
