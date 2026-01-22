@@ -45,7 +45,7 @@ Este archivo define estilos reutilizables en:
 }
 
 /* Párrafo base */
-.helado-intro p, .hero-overlay p, .historia-parrafo, .index-main-parrafo {
+.helado-intro p, .historia-parrafo, .index-main-parrafo {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.6;
@@ -68,6 +68,18 @@ Este archivo define estilos reutilizables en:
 }
 
 /* Hero - títulos y textos */
+.hero-overlay h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-overlay p {
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
 /* =========================================
 NAVBAR
 Estilos correspondientes a la barra de navegación
@@ -1077,12 +1089,12 @@ Estilos específicos de la página de Tu Lado Helado.
   max-width: 600px;
 }
 .hero-overlay h1 {
-  margin-bottom: 0.5rem;
-  color: #D25B4B;
+  color: #D25B4B !important;
+  margin-bottom: 0.4rem;
 }
 .hero-overlay p {
-  max-width: 420px;
   color: #D25B4B;
+  max-width: 420px;
 }
 
 /* ---- Test ---- */

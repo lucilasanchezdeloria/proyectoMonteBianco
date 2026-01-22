@@ -31,14 +31,15 @@ Estilos específicos de la página de Tu Lado Helado.
     max-width: 600px;
 
     h1 {
-        margin-bottom: 0.5rem;
-        color: $rosa;
+        @extend %hero-title;
+        color: $rosa !important;
+        margin-bottom: 0.4rem;
     }
 
     p {
-        @extend %parrafo-base;
-        max-width: 420px;
+        @extend %hero-paragraph;
         color: $rosa;
+        max-width: 420px;
     }
 }
 
