@@ -690,6 +690,8 @@ Estilos específicos de la página de Nuestros Sabores.
   justify-items: start;
   margin-bottom: 1rem;
   background: transparent;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Tamaño de las imágenes */
@@ -805,10 +807,21 @@ MEDIA QUERY - SABORES
     padding-right: 1rem;
   }
 }
-.sabores-section {
-  overflow-x: clip;
+@media (max-width: 576px) {
+  body {
+    overflow-x: hidden;
+  }
+  .sabores-section {
+    overflow-x: hidden;
+  }
 }
-
+@media (max-width: 576px) {
+  .sabor-item:hover {
+    transform: none;
+    filter: none;
+    box-shadow: none;
+  }
+}
 /* =========================================
 CONTACTO
 Estilos específicos de la página de Contacto.
