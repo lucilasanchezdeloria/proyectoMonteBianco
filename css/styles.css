@@ -590,9 +590,10 @@ Estilos específicos de la página de Nuestra Historia.
   justify-content: flex-start;
   align-items: stretch;
   gap: 2.5rem;
-  padding-left: 1rem;
+  padding-left: 2rem;
   border-left: 3px solid #D25B4B;
   margin-bottom: 4rem;
+  overflow-x: hidden;
 }
 
 .hito {
@@ -603,7 +604,7 @@ Estilos específicos de la página de Nuestra Historia.
 .hito::before {
   content: "";
   position: absolute;
-  left: -0.6rem;
+  left: -1.1rem;
   top: 0.4rem;
   width: 12px;
   height: 12px;
@@ -648,8 +649,10 @@ MEDIA QUERY - HISTORIA
 /* ---- Main - Responsive ---- */
 @media (max-width: 576px) {
   .historia-linea-tiempo {
-    border-left: 2px solid #4A5E3D;
-    padding-left: 0.8rem;
+    border-left: 3px solid #4A5E3D;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    margin-left: 0;
   }
 }
 /* =========================================

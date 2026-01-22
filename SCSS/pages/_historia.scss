@@ -5,7 +5,7 @@ Estilos específicos de la página de Nuestra Historia.
 
 /* ---- Header ---- */
 .site-header {
-  position: relative;
+    position: relative;
 }
 
 .historia-header {
@@ -37,16 +37,17 @@ Estilos específicos de la página de Nuestra Historia.
 }
 
 .historia-parrafo {
-  @extend %parrafo-base;
-  margin-bottom: 1.2rem;
+    @extend %parrafo-base;
+    margin-bottom: 1.2rem;
 }
 
 /* Estilos línea de tiempo */
 .historia-linea-tiempo {
     @include flex(column, flex-start, stretch, 2.5rem);
-    padding-left: 1rem;
+    padding-left: 2rem;
     border-left: 3px solid $rosa;
     margin-bottom: 4rem;
+    overflow-x: hidden;
 }
 
 .hito {
@@ -57,7 +58,7 @@ Estilos específicos de la página de Nuestra Historia.
 .hito::before {
     content: "";
     position: absolute;
-    left: -0.6rem;
+    left: -1.1rem;
     top: 0.4rem;
     width: 12px;
     height: 12px;
@@ -106,7 +107,9 @@ MEDIA QUERY - HISTORIA
 /* ---- Main - Responsive ---- */
 @include respond-max($mobile) {
     .historia-linea-tiempo {
-        border-left: 2px solid $verde;
-        padding-left: 0.8rem;
+        border-left: 3px solid $verde;
+        padding-left: 2rem;
+        padding-right: 1rem;
+        margin-left: 0;
     }
 }
