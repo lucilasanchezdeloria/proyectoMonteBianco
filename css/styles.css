@@ -676,6 +676,11 @@ Estilos específicos de la página de Nuestros Sabores.
   text-align: left;
   white-space: nowrap;
 }
+@media (max-width: 576px) {
+  .sabores-subtitulo {
+    white-space: normal;
+  }
+}
 
 /* Grid de imágenes */
 .sabores-grid {
@@ -689,7 +694,8 @@ Estilos específicos de la página de Nuestros Sabores.
 
 /* Tamaño de las imágenes */
 .sabor-item {
-  width: 160px;
+  width: 100%;
+  max-width: 160px;
   transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -749,6 +755,16 @@ MEDIA QUERY - SABORES
     height: 45vh;
   }
 }
+@media (max-width: 576px) and (max-width: 576px) {
+  .sabores-grid {
+    justify-items: center;
+    gap: 1rem;
+  }
+  .sabor-item {
+    max-width: 140px;
+    width: 100%;
+  }
+}
 @media (max-width: 480px) {
   .sabores-grid {
     grid-template-columns: 1fr;
@@ -761,6 +777,32 @@ MEDIA QUERY - SABORES
   .sabores-grid .sabor-item:nth-child(3),
   .sabores-grid .sabor-item:nth-child(4) {
     display: none;
+  }
+}
+/* ---- Lista de sabores responsive ---- */
+@media (max-width: 768px) {
+  .sabores-lista {
+    columns: 2;
+    column-gap: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  .sabores-lista {
+    columns: 1;
+    column-gap: 0;
+  }
+}
+@media (max-width: 576px) {
+  .sabores-encabezado {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .sabores-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 /* =========================================

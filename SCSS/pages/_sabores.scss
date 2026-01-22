@@ -5,7 +5,7 @@ Estilos específicos de la página de Nuestros Sabores.
 
 /* ---- Header ---- */
 .site-header {
-  position: relative;
+    position: relative;
 }
 
 .carousel-item img {
@@ -42,6 +42,10 @@ Estilos específicos de la página de Nuestros Sabores.
     text-align: left;
     white-space: nowrap;
 
+    @include respond-max($mobile) {
+        white-space: normal;
+    }
+
 }
 
 /* Grid de imágenes */
@@ -56,7 +60,8 @@ Estilos específicos de la página de Nuestros Sabores.
 
 /* Tamaño de las imágenes */
 .sabor-item {
-    width: 160px;
+    width: 100%;
+    max-width: 160px;
     transition: transform 0.35s ease,
         filter 0.35s ease,
         box-shadow 0.35s ease;
@@ -125,6 +130,18 @@ MEDIA QUERY - SABORES
     .carousel-item img {
         height: 45vh;
     }
+
+    @include respond-max($mobile) {
+        .sabores-grid {
+            justify-items: center;
+            gap: 1rem;
+        }
+
+        .sabor-item {
+            max-width: 140px;
+            width: 100%;
+        }
+    }
 }
 
 @include respond-max($mobile-small) {
@@ -141,5 +158,36 @@ MEDIA QUERY - SABORES
     .sabores-grid .sabor-item:nth-child(3),
     .sabores-grid .sabor-item:nth-child(4) {
         display: none;
+    }
+}
+
+/* ---- Lista de sabores responsive ---- */
+
+@include respond-max($tablet) {
+    .sabores-lista {
+        columns: 2;
+        column-gap: 2rem;
+    }
+}
+
+@include respond-max($mobile) {
+    .sabores-lista {
+        columns: 1;
+        column-gap: 0;
+    }
+}
+
+@include respond-max($mobile) {
+    .sabores-encabezado {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@include respond-max($mobile) {
+    .sabores-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
