@@ -131,18 +131,17 @@ MEDIA QUERY - SABORES
         height: 45vh;
     }
 
-    @include respond-max($mobile) {
-        .sabores-grid {
-            justify-items: center;
-            gap: 1rem;
-        }
+    .sabores-grid {
+        justify-items: center;
+        gap: 1rem;
+    }
 
-        .sabor-item {
-            max-width: 140px;
-            width: 100%;
-        }
+    .sabor-item {
+        max-width: 140px;
+        width: 100%;
     }
 }
+
 
 @include respond-max($mobile-small) {
     .sabores-grid {
@@ -172,8 +171,10 @@ MEDIA QUERY - SABORES
 
 @include respond-max($mobile) {
     .sabores-lista {
-        columns: 1;
+        columns: auto;
+        column-count: 1;
         column-gap: 0;
+        padding-right: 0;
     }
 }
 
@@ -190,4 +191,8 @@ MEDIA QUERY - SABORES
         padding-left: 1rem;
         padding-right: 1rem;
     }
+}
+
+.sabores-section {
+    overflow-x: clip;
 }

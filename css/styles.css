@@ -754,8 +754,6 @@ MEDIA QUERY - SABORES
   .carousel-item img {
     height: 45vh;
   }
-}
-@media (max-width: 576px) and (max-width: 576px) {
   .sabores-grid {
     justify-items: center;
     gap: 1rem;
@@ -788,8 +786,10 @@ MEDIA QUERY - SABORES
 }
 @media (max-width: 576px) {
   .sabores-lista {
-    columns: 1;
+    columns: auto;
+    column-count: 1;
     column-gap: 0;
+    padding-right: 0;
   }
 }
 @media (max-width: 576px) {
@@ -805,6 +805,10 @@ MEDIA QUERY - SABORES
     padding-right: 1rem;
   }
 }
+.sabores-section {
+  overflow-x: clip;
+}
+
 /* =========================================
 CONTACTO
 Estilos específicos de la página de Contacto.
