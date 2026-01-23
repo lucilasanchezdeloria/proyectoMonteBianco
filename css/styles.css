@@ -1299,8 +1299,21 @@ MEDIA QUERY - TU LADO HELADO
 /* ---- Tu Lado Helado- Responsive ---- */
 @media (max-width: 768px) {
   .hero-overlay {
-    padding: 0 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    padding: 6rem 1.5rem 2rem;
     max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+  .hero-overlay h1 {
+    color: #ffffff !important;
+  }
+  .hero-overlay p,
+  .hero-overlay h2 {
+    color: #ffffff !important;
+    font-size: 1rem !important;
+    margin-bottom: 2.5rem;
   }
   .helado-form {
     padding: 0 1rem;
