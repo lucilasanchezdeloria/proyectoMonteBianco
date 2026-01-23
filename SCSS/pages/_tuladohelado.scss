@@ -183,16 +183,17 @@ Estilos específicos de la página de Tu Lado Helado.
 /* ---- CTA ---- */
 .resultado-cta {
     margin-top: $spacing-lg;
-    padding: 2.5rem 2rem;
-    text-align: center;
+    padding: 3rem 2rem;
     background-color: rgba($rosa, 0.12);
     border-radius: 24px;
+
+    @include flex(column, center, center, 2rem);
+
     text-align: center;
 
-    p {
-        font-size: 1.35rem;
-        font-weight: 700;
-        margin-bottom: 1.8rem;
+    p,
+    h2 {
+        margin: 0;
         letter-spacing: 0.2px;
         color: $verde;
     }
