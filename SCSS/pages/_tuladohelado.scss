@@ -30,24 +30,28 @@ Estilos específicos de la página de Tu Lado Helado.
     display: block;
 }
 
+/* REEMPLAZAR EN SECCIÓN TU LADO HELADO */
+
 .hero-overlay {
     position: absolute;
     inset: 0;
 
-    @include flex(column, center, flex-start, 1.2rem);
+    @include flex(column, center, flex-start, 0);
+
     padding-left: 4rem;
     max-width: 600px;
 
     h1 {
         @extend %hero-title;
         color: $rosa !important;
-        margin-bottom: 0.4rem;
+        margin-bottom: 1rem;
     }
 
     p {
         @extend %hero-paragraph;
         color: $rosa;
         max-width: 420px;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -287,18 +291,19 @@ MEDIA QUERY - TU LADO HELADO
     .hero-overlay {
         padding: 0 2rem;
         max-width: 100%;
-        
+
         /* 1. Fondo oscuro para que el texto resalte sobre el video */
-        background-color: $negro-45; 
-        
+        background-color: $negro-45;
+
         /* 2. CLAVE: Cambiamos el texto a BLANCO para generar contraste 
            (igual que en el Index) */
         h1 {
             color: $blanco !important;
         }
-        
+
         /* Apuntamos a p y h2 por las dudas, para cubrir ambas opciones */
-        p, h2 {
+        p,
+        h2 {
             color: $blanco !important;
         }
     }
