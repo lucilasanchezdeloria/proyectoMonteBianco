@@ -12,7 +12,9 @@
     <meta property="og:title" content="Tu Lado Helado | Monte Bianco">
     <meta property="og:description" content="Un test interactivo para descubrir tu lado helado y tu sabor ideal.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tusitio.com/pages/tuladohelado.html">
+    <meta property="og:url"
+        content="https://lucilasanchezdeloria.github.io/proyectoMonteBianco/pages/tuladohelado.html">
+    <link rel="canonical" href="https://lucilasanchezdeloria.github.io/proyectoMonteBianco/pages/tuladohelado.html">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -61,21 +63,21 @@
             </div>
         </nav>
 
-        <div class="helado-header">
-            <div class="hero-helado">
-                <video class="hero-video" autoplay muted loop playsinline
-                    aria-label="Video artístico sobre personas y helado" aria-describedby="hero-desc">
-                    <source src="../img/hero-helado.mp4" type="video/mp4">
-                    Tu navegador no soporta video HTML5.
-                </video>
+        <section class="helado-header hero-helado">
+            <video class="hero-video" autoplay muted loop playsinline
+                aria-label="Video artístico sobre personas y helado" aria-describedby="hero-desc">
+                <source src="../img/hero-helado.mp4" type="video/mp4">
+                Tu navegador no soporta video HTML5.
+            </video>
 
-                <div class="hero-overlay">
+            <div class="hero-overlay">
+                <section class="hero">
                     <h1>Tu Lado Helado</h1>
                     <p id="hero-desc">Descubrí qué dice tu sabor favorito sobre vos</p>
                     <a href="#helado-test" class="boton">Empezar</a>
-                </div>
+                </section>
             </div>
-        </div>
+        </section>
     </header>
 
     <!-- TEST -->
@@ -89,8 +91,8 @@
         <form class="helado-form">
 
             <!-- PREGUNTA 1 -->
-            <fieldset class="helado-pregunta">
-                <legend>¿Cómo te definirías hoy?</legend>
+            <fieldset class="helado-pregunta" aria-labelledby="pregunta-1">
+                <legend id="pregunta-1">¿Cómo te definirías hoy?</legend>
 
                 <label class="helado-opcion">
                     <input type="radio" name="estado" value="calmo" checked>
@@ -114,8 +116,8 @@
             </fieldset>
 
             <!-- PREGUNTA 2 -->
-            <fieldset class="helado-pregunta">
-                <legend>¿Qué te atrae más?</legend>
+            <fieldset class="helado-pregunta" aria-labelledby="pregunta-2">
+                <legend id="pregunta-2">¿Qué te atrae más?</legend>
 
                 <label class="helado-opcion">
                     <input type="radio" name="sensacion" value="calmo" checked>
@@ -139,8 +141,8 @@
             </fieldset>
 
             <!-- PREGUNTA 3 -->
-            <fieldset class="helado-pregunta">
-                <legend>Cuando tenés un momento solo para vos, ¿qué valorás más?</legend>
+            <fieldset class="helado-pregunta" aria-labelledby="pregunta-3">
+                <legend id="pregunta-3">Cuando tenés un momento solo para vos, ¿qué valorás más?</legend>
 
                 <label class="helado-opcion">
                     <input type="radio" name="momento" value="calmo" checked>
@@ -164,8 +166,8 @@
             </fieldset>
 
             <!-- PREGUNTA 4 (DEFINE EL RESULTADO) -->
-            <fieldset class="helado-pregunta">
-                <legend>Si tuvieras que elegir una experiencia, ¿cuál se te parece más?</legend>
+            <fieldset class="helado-pregunta" aria-labelledby="pregunta-4">
+                <legend id="pregunta-4">Si tuvieras que elegir una experiencia, ¿cuál se te parece más?</legend>
 
                 <label class="helado-opcion">
                     <input type="radio" name="resultado" value="vainilla" checked>
@@ -189,7 +191,7 @@
             </fieldset>
 
             <!-- RESULTADOS -->
-            <section class="helado-resultado">
+            <section class="helado-resultado" aria-live="polite">
 
                 <p class="resultado-intro">Hoy tu lado se parece a…</p>
 
