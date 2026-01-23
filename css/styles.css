@@ -218,7 +218,10 @@ footer {
 /* Estilos de texto*/
 .footer-heading {
   margin: 0;
-  font-weight: 600;
+  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
 }
 
 /* Tamaño de los logos del footer */
