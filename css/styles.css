@@ -492,7 +492,7 @@ MEDIA QUERY - INDEX
 }
 /* Sumé overlay oscuro cuando se reduce el ancho 
    para mejorar contraste del texto */
-@media (max-width: 835px) {
+@media (max-width: 992px) {
   .index-header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/homebanner.jpg);
   }

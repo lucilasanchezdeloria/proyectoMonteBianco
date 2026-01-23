@@ -146,7 +146,7 @@ MEDIA QUERY - INDEX
 
 /* Sumé overlay oscuro cuando se reduce el ancho 
    para mejorar contraste del texto */
-@include respond-max($tablet-large) {
+@include respond-max($desktop) {
     .index-header {
         background-image:
             linear-gradient($negro-45, $negro-45),
