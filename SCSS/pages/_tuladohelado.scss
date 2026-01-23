@@ -282,3 +282,28 @@ MEDIA QUERY - TU LADO HELADO
         grid-template-columns: 1fr;
     }
 }
+
+@include respond-max($tablet) {
+    .hero-overlay {
+        padding: 0 2rem;
+        max-width: 100%;
+        
+        /* 1. Fondo oscuro para que el texto resalte sobre el video */
+        background-color: $negro-45; 
+        
+        /* 2. CLAVE: Cambiamos el texto a BLANCO para generar contraste 
+           (igual que en el Index) */
+        h1 {
+            color: $blanco !important;
+        }
+        
+        /* Apuntamos a p y h2 por las dudas, para cubrir ambas opciones */
+        p, h2 {
+            color: $blanco !important;
+        }
+    }
+
+    .helado-form {
+        padding: 0 1rem;
+    }
+}

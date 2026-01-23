@@ -1317,6 +1317,28 @@ MEDIA QUERY - TU LADO HELADO
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 768px) {
+  .hero-overlay {
+    padding: 0 2rem;
+    max-width: 100%;
+    /* 1. Fondo oscuro para que el texto resalte sobre el video */
+    background-color: rgba(0, 0, 0, 0.45);
+    /* 2. CLAVE: Cambiamos el texto a BLANCO para generar contraste 
+       (igual que en el Index) */
+  }
+  .hero-overlay h1 {
+    color: #ffffff !important;
+  }
+  .hero-overlay {
+    /* Apuntamos a p y h2 por las dudas, para cubrir ambas opciones */
+  }
+  .hero-overlay p, .hero-overlay h2 {
+    color: #ffffff !important;
+  }
+  .helado-form {
+    padding: 0 1rem;
+  }
+}
 /* =========================================
 ESTILOS GENERALES
 ========================================= */
